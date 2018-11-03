@@ -344,3 +344,5 @@ ASALocalRun/
 
 # End of https://www.gitignore.io/api/visualstudio,xamarinstudio
 
+
+BorrowMyAngel/google-services\.json
