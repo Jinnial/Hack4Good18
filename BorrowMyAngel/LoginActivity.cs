@@ -10,10 +10,10 @@ using Android.Gms.Tasks;
 using Android.Support.Design.Widget;
 
 
-namespace BorrowMyAngel.Resources.layout
+namespace BorrowMyAngel
 {
     [Activity(Label = "XamarinFirebaseAuth", MainLauncher = true, Theme = "@style/AppTheme")]
-    public class MainActivity : Activity, IOnClickListener, IOnCompleteListener
+    public class LoginActivity : Activity, IOnClickListener, IOnCompleteListener
     {
         Button btnLogin;
         EditText input_email, input_password;
@@ -42,8 +42,8 @@ namespace BorrowMyAngel.Resources.layout
         private void InitFirebaseAuth()
         {
             var options = new FirebaseOptions.Builder()
-               .SetApplicationId("AIzaSyDDkjTIE-LQMNCfPOwzR8kX0-IPENxl_xY")
-               .SetApiKey("AIzaSyBmuAwrNEgENM40rnjUToHHMraFXQOyuPE")
+               .SetApplicationId("")
+               .SetApiKey("")
                .Build();
             if (app == null)
                 app = FirebaseApp.InitializeApp(this, options);
