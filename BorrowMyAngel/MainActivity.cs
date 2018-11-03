@@ -6,7 +6,7 @@ using System;
 
 namespace BorrowMyAngel
 {
-    [Activity(Label = "Borrow My Angel", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "Borrow My Angel", MainLauncher = false, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
 
@@ -21,14 +21,14 @@ namespace BorrowMyAngel
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.myButton);
 
-            button.Click += Login_Click;
+            //button.Click += Login_Click;
         }
 
-        private void Login_Click(object sender, EventArgs e)
-        {
-            var secondIntent = new Intent(this, typeof(LoginActivity));
-            StartActivity(secondIntent);
-        }
+        //private void Login_Click(object sender, EventArgs e)
+        //{
+        //    var secondIntent = new Intent(this, typeof(LoginActivity));
+        //    StartActivity(secondIntent);
+        //}
     }
 }
 
