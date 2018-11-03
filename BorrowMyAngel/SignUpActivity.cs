@@ -125,6 +125,12 @@ namespace BorrowMyAngel
                         statusText = "Finished";
                         var responseReader = new System.IO.StreamReader(response.Result.Payload);
                         informationalText = responseReader.ReadToEnd();
+
+                        //take the user over to the profile layout so we can collect the rest of the information
+                        var activity = new Intent(this, typeof(UserProfileActivity));
+                        activity.PutExtra("id", user.Uid);
+                        activity.PutExtra("email", user.Email);
+                        StartActivity(activity);
                     }
 
                     // This continuation is not run on the main UI thread, so need to set up

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<ScrollView>
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		 android:layout_height="match_parent">
+		</LinearLayout>
+	</ScrollView>
+	<TextView
+		android:text="Legal disclaimer stuff goes here.  Please agree"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/textView1" />
+	<Button
+		android:text="I Agree"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/agreeButton" />
+</LinearLayout>
