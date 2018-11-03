@@ -9,6 +9,10 @@ using Firebase.Auth;
 using static Android.Views.View;
 using Newtonsoft.Json;
 using System;
+using Newtonsoft.Json.Linq;
+using Amazon.Lambda.Model;
+using Amazon.Lambda;
+using Amazon.Util;
 
 namespace BorrowMyAngel
 {
@@ -94,8 +98,19 @@ namespace BorrowMyAngel
                 //setup the lambda client with the credential and endpoint information
                 Amazon.Lambda.AmazonLambdaClient client = new Amazon.Lambda.AmazonLambdaClient(awsCredentials, region);
 
+                JObject myUser = new JObject();
+                myUser["id"] = user.Uid;
+                myUser["email"] = user.Email;
+
                 //payload has to be encapsulated in double quotes, thus the strange escape sequences here
-                var invokeRequest = new Amazon.Lambda.Model.InvokeRequest { FunctionName = "WriteLogin", InvocationType = "RequestResponse", Payload = "\"" + user + "\"" };
+                var invokeRequest = new Amazon.Lambda.Model.InvokeRequest { FunctionName = "WriteLogin", InvocationType = "RequestResponse", PayloadStream = AWSSDKUtils.GenerateMemoryStreamFromString(myUser.ToString()), };
+
+                //var ir = new InvokeRequest()
+                //{
+                //    FunctionName = "WriteLogin",
+                //    PayloadStream = AWSSDKUtils.GenerateMemoryStreamFromString(myUser.ToString()),
+                //    InvocationType = InvocationType.RequestResponse
+                //};
 
                 //going to put this task on another thread so the UI doesn't lock up
                 System.Threading.Tasks.Task<Amazon.Lambda.Model.InvokeResponse> responseTask = client.InvokeAsync(invokeRequest);
@@ -138,4 +153,6 @@ namespace BorrowMyAngel
             }
         }
     }
+
+
 }
