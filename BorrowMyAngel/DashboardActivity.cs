@@ -7,65 +7,34 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using System;
 using static Android.Views.View;
 
 namespace BorrowMyAngel
 {
-    [Activity(Label = "DashBoard", Theme = "@style/AppTheme")]
-    public class DashBoardActivity : AppCompatActivity, IOnClickListener, IOnCompleteListener
+    [Activity(Label = "Dashboard", Theme = "@style/AppTheme")]
+    public class DashBoardActivity : AppCompatActivity
     {
-        TextView txtWelcome;
-        EditText input_new_password;
-        Button btnChangePass, btnLogout;
-        RelativeLayout activity_dashboard;
-        FirebaseAuth auth;
-        public void OnClick(View v)
-        {
-            if (v.Id == Resource.Id.dashboard_btn_change_pass)
-                ChangePassword(input_new_password.Text);
-            else if (v.Id == Resource.Id.dashboard_btn_logout)
-                LogoutUser();
-        }
-        private void LogoutUser()
-        {
-            auth.SignOut();
-            if (auth.CurrentUser == null)
-            {
-                StartActivity(new Intent(this, typeof(MainActivity)));
-                Finish();
-            }
-        }
-        private void ChangePassword(string newPassword)
-        {
-            FirebaseUser user = auth.CurrentUser;
-            user.UpdatePassword(newPassword)
-            .AddOnCompleteListener(this);
-        }
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Dashboard);
-            //Init Firebase  
-            auth = FirebaseAuth.GetInstance(LoginActivity.app);
-            //View  
-            btnChangePass = FindViewById<Button>(Resource.Id.dashboard_btn_change_pass);
-            txtWelcome = FindViewById<TextView>(Resource.Id.dashboard_welcome);
-            btnLogout = FindViewById<Button>(Resource.Id.dashboard_btn_logout);
-            input_new_password = FindViewById<EditText>(Resource.Id.dashboard_newpassword);
-            activity_dashboard = FindViewById<RelativeLayout>(Resource.Id.activity_dashboard);
-            btnChangePass.SetOnClickListener(this);
-            btnLogout.SetOnClickListener(this);
-            //Check Session  
-            if (auth != null)
-                txtWelcome.Text = "Welcome , " + auth.CurrentUser.Email;
+
+            Button startCall = FindViewById<Button>(Resource.Id.startCall);
+            startCall.Click += StartCall_Click;
         }
-        public void OnComplete(Task task)
+       
+
+        private void StartCall_Click(object sender, EventArgs e)
         {
-            if (task.IsSuccessful == true)
-            {
-                Snackbar snackbar = Snackbar.Make(activity_dashboard, "Password has been Changed!", Snackbar.LengthShort);
-                snackbar.Show();
-            }
+            // var intent = new Intent(this, typeof(AudioCallActivity));
+            //StartActivity(intent);
+
+            var uri = Android.Net.Uri.Parse("https://static.vidyo.io/4.1.24.15/connector/VidyoConnector.html?host=prod.vidyo.io&token=" + Auth.vidToken + "&resourceId=SomeRoom");
+            var intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
         }
+
     }
 }

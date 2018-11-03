@@ -13,7 +13,7 @@ using Android.Support.Design.Widget;
 
 namespace BorrowMyAngel
 {
-    [Activity(Label = "XamarinFirebaseAuth", MainLauncher = true, Theme = "@style/AppTheme")]
+    [Activity(Label = "XamarinFirebaseAuth", Theme = "@style/AppTheme")]
     public class LoginActivity : Activity, IOnCompleteListener
     {
         Button btnLogin;
