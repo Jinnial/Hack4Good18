@@ -173,7 +173,6 @@
   <ItemGroup>
     <Compile Include="Auth.cs" />
     <Compile Include="DashboardActivity.cs" />
-    <Compile Include="DataAdapter.cs" />
     <Compile Include="ForgetPasswordActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="LoginActivity.cs" />

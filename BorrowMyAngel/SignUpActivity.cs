@@ -118,8 +118,6 @@ namespace BorrowMyAngel
                     else if (response.IsCompleted)
                     {
                         statusText = "Finished";
-                        var responseReader = new System.IO.StreamReader(response.Result.Payload);
-                        informationalText = responseReader.ReadToEnd();
                     }
 
                     // This continuation is not run on the main UI thread, so need to set up
