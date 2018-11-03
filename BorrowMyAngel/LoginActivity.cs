@@ -82,8 +82,8 @@ namespace BorrowMyAngel
             }
             else
             {
-                Snackbar snackbar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
-                snackbar.Show();
+                //Snackbar snackbar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
+                //snackbar.Show();
             }
         }
 

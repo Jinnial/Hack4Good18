@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Gms.Tasks;
 using Android.OS;
 using Android.Support.Design.Widget;
@@ -31,9 +32,7 @@ namespace BorrowMyAngel
             // var intent = new Intent(this, typeof(AudioCallActivity));
             //StartActivity(intent);
 
-            var uri = Android.Net.Uri.Parse("https://static.vidyo.io/4.1.24.15/connector/VidyoConnector.html?host=prod.vidyo.io&token=" + Auth.vidToken + "&resourceId=SomeRoom");
-            var intent = new Intent(Intent.ActionView, uri);
-            StartActivity(intent);
+         
         }
 
     }
