@@ -76,7 +76,7 @@ namespace BorrowMyAngel
         {
             if (task.IsSuccessful)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(DashBoard)));
+                StartActivity(new Android.Content.Intent(this, typeof(DashBoardActivity)));
                 Finish();
             }
             else

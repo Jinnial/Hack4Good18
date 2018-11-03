@@ -44,7 +44,7 @@ namespace BorrowMyAngel
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.DashBoardActivity);
+            SetContentView(Resource.Layout.Dashboard);
             //Init Firebase  
             auth = FirebaseAuth.GetInstance(LoginActivity.app);
             //View  

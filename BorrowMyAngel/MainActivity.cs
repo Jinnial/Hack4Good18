@@ -1,13 +1,14 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
+using System;
 
 namespace BorrowMyAngel
 {
     [Activity(Label = "Borrow My Angel", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -20,7 +21,13 @@ namespace BorrowMyAngel
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.myButton);
 
-            button.Click += delegate { button.Text = $"{count++} clicks!"; };
+            button.Click += Login_Click;
+        }
+
+        private void Login_Click(object sender, EventArgs e)
+        {
+            var secondIntent = new Intent(this, typeof(LoginActivity));
+            StartActivity(secondIntent);
         }
     }
 }
