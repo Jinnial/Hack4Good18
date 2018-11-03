@@ -40,7 +40,7 @@ namespace BorrowMyAngel
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ForgetPassword);
             //Init Firebase  
-            auth = FirebaseAuth.GetInstance(MainActivity.app);
+            auth = FirebaseAuth.GetInstance(LoginActivity.app);
             //Views  
             input_email = FindViewById<EditText>(Resource.Id.forget_email);
             btnResetPas = FindViewById<Button>(Resource.Id.forget_btn_reset);

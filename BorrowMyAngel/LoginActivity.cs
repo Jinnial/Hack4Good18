@@ -53,13 +53,13 @@ namespace BorrowMyAngel
         {
             if (v.Id == Resource.Id.login_btn_forget_password)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(ForgetPassword)));
+                StartActivity(new Android.Content.Intent(this, typeof(ForgetPasswordActivity)));
                 Finish();
             }
             else
             if (v.Id == Resource.Id.login_btn_sign_up)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(SignUp)));
+                StartActivity(new Android.Content.Intent(this, typeof(SignUpActivity)));
                 Finish();
             }
             else
