@@ -26,6 +26,10 @@ namespace BorrowMyAngel
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLCrypto.Resource.String.ApplicationName = global::BorrowMyAngel.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::BorrowMyAngel.Resource.String.Hello;
+			global::PCLStorage.Resource.String.ApplicationName = global::BorrowMyAngel.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::BorrowMyAngel.Resource.String.Hello;
 		}
 		
 		public partial class Animation
@@ -3379,6 +3383,12 @@ namespace BorrowMyAngel
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f09003a
+			public const int ApplicationName = 2131296314;
+			
+			// aapt resource value: 0x7f090039
+			public const int Hello = 2131296313;
+			
 			// aapt resource value: 0x7f090012
 			public const int abc_action_bar_home_description = 2131296274;
 			
@@ -3466,8 +3476,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f090022
 			public const int abc_toolbar_collapse_description = 2131296290;
 			
-			// aapt resource value: 0x7f09003a
-			public const int app_name = 2131296314;
+			// aapt resource value: 0x7f09003c
+			public const int app_name = 2131296316;
 			
 			// aapt resource value: 0x7f090030
 			public const int appbar_scrolling_view_behavior = 2131296304;
@@ -3532,8 +3542,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f090011
 			public const int fcm_fallback_notification_channel_label = 2131296273;
 			
-			// aapt resource value: 0x7f090039
-			public const int hello = 2131296313;
+			// aapt resource value: 0x7f09003b
+			public const int hello = 2131296315;
 			
 			// aapt resource value: 0x7f090033
 			public const int password_toggle_content_description = 2131296307;

@@ -10,6 +10,7 @@ using Android.Gms.Tasks;
 using Android.Support.Design.Widget;
 
 
+
 namespace BorrowMyAngel
 {
     [Activity(Label = "XamarinFirebaseAuth", MainLauncher = true, Theme = "@style/AppTheme")]
@@ -85,5 +86,7 @@ namespace BorrowMyAngel
                 snackbar.Show();
             }
         }
+
+  
     }
 }
