@@ -36,8 +36,7 @@ namespace BorrowMyAngel
 
         private void SignUp_Click(object sender, EventArgs e)
         {
-            var intent = new Intent(this, typeof(LoginActivity));
-            StartActivity(intent);
+           //open page on the site that has the application
         }
     }
 }
