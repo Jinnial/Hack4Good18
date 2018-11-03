@@ -13,7 +13,7 @@ using Android.Support.Design.Widget;
 namespace BorrowMyAngel
 {
     [Activity(Label = "XamarinFirebaseAuth", MainLauncher = true, Theme = "@style/AppTheme")]
-    public class LoginActivity : Activity, IOnClickListener, IOnCompleteListener
+    public class LoginActivity : Activity, IOnCompleteListener
     {
         Button btnLogin;
         EditText input_email, input_password;
@@ -25,7 +25,7 @@ namespace BorrowMyAngel
         {
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource  
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.Login);
             //Init Auth  
             InitFirebaseAuth();
             //Views  
@@ -35,39 +35,39 @@ namespace BorrowMyAngel
             btnSignUp = FindViewById<TextView>(Resource.Id.login_btn_sign_up);
             btnForgetPassword = FindViewById<TextView>(Resource.Id.login_btn_forget_password);
             activity_main = FindViewById<RelativeLayout>(Resource.Id.activity_main);
-            btnSignUp.SetOnClickListener(this);
-            btnLogin.SetOnClickListener(this);
-            btnForgetPassword.SetOnClickListener(this);
+            btnSignUp.Click += SignUp_Click;
+            btnLogin.Click += Login_Click;
+            btnForgetPassword.Click += Forgot_Click;
         }
         private void InitFirebaseAuth()
         {
             var options = new FirebaseOptions.Builder()
-               .SetApplicationId("")
-               .SetApiKey("")
+               .SetApplicationId(Auth.ApplicationID)
+               .SetApiKey(Auth.APIKey)
                .Build();
             if (app == null)
                 app = FirebaseApp.InitializeApp(this, options);
             auth = FirebaseAuth.GetInstance(app);
         }
-        public void OnClick(View v)
+
+        private void SignUp_Click(object sender, EventArgs e)
         {
-            if (v.Id == Resource.Id.login_btn_forget_password)
-            {
-                StartActivity(new Android.Content.Intent(this, typeof(ForgetPasswordActivity)));
-                Finish();
-            }
-            else
-            if (v.Id == Resource.Id.login_btn_sign_up)
-            {
-                StartActivity(new Android.Content.Intent(this, typeof(SignUpActivity)));
-                Finish();
-            }
-            else
-            if (v.Id == Resource.Id.login_btn_login)
-            {
-                LoginUser(input_email.Text, input_password.Text);
-            }
+            StartActivity(new Android.Content.Intent(this, typeof(SignUpActivity)));
+            Finish();
         }
+
+        private void Login_Click(object sender, EventArgs e)
+        {
+            LoginUser(input_email.Text, input_password.Text);
+        }
+
+        private void Forgot_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Android.Content.Intent(this, typeof(ForgetPasswordActivity)));
+            Finish();
+        }
+
+
         private void LoginUser(string email, string password)
         {
             auth.SignInWithEmailAndPassword(email, password).AddOnCompleteListener(this);

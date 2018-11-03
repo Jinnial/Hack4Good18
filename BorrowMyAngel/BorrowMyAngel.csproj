@@ -130,6 +130,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth.cs" />
     <Compile Include="DashboardActivity.cs" />
     <Compile Include="ForgetPasswordActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -139,6 +140,7 @@
     <Compile Include="SignUpActivity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="google-services.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
