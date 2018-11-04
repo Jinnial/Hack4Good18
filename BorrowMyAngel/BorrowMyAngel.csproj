@@ -170,6 +170,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AngelDashboardActivity.cs" />
     <Compile Include="AudioCallActivity.cs" />
     <Compile Include="Auth.cs" />
     <Compile Include="DashboardActivity.cs" />
@@ -253,6 +254,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\GuestDashboard.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\AngelDashboard.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

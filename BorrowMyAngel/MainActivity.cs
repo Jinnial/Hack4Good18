@@ -6,7 +6,7 @@ using System;
 
 namespace BorrowMyAngel
 {
-    [Activity(Label = "Borrow My Angel", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "Borrow My Angel", Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
 
