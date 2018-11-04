@@ -32,17 +32,16 @@ namespace BorrowMyAngel {
                 Log.Debug(TAG, "Performing some startup work...");
                 //Task.Delay(5000); //delay while we show the splash screen
                 Task startupWork = new Task(() => { DoStartup(); });
-            //Log.Debug(TAG, "Done waiting");
+                //Log.Debug(TAG, "Done waiting");
             
                 startupWork.Start();
             
         }
         async void DoStartup() {
             Log.Debug(TAG, "Waiting done, launching main activity");
-            await Task.Delay (3000);
+            await Task.Delay (2000);
             Log.Debug(TAG, "Startup work is finished - starting SignUpActivity.");
-            StartActivity(new Intent(Application.Context, typeof (SignUpActivity)));
-            //OverridePendingTransition(0, Resource.Animation.splash_fade);
+            StartActivity(new Intent(this, typeof(LoginActivity)));
         }
 
         public override void OnBackPressed() { }
