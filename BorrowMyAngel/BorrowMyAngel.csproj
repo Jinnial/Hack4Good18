@@ -174,7 +174,7 @@
     <Compile Include="AudioCallActivity.cs" />
     <Compile Include="Auth.cs" />
     <Compile Include="DashboardActivity.cs" />
-    <Compile Include="ForgetPasswordActivity.cs" />
+    <Compile Include="ForgotPasswordActivity.cs" />
     <Compile Include="GuestDashboardActivity.cs" />
     <Compile Include="LegalDisclaimerActivity.cs" />
     <Compile Include="LoginActivity.cs" />
@@ -213,11 +213,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\SignUp.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\ForgetPassword.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -273,6 +268,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\AngelDashboard.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ForgotPassword.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

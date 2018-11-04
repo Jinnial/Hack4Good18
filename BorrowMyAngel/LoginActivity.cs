@@ -66,7 +66,7 @@ namespace BorrowMyAngel
 
         private void Forgot_Click(object sender, EventArgs e)
         {
-            StartActivity(new Android.Content.Intent(this, typeof(ForgetPasswordActivity)));
+            StartActivity(new Android.Content.Intent(this, typeof(ForgotPasswordActivity)));
            
         }
 

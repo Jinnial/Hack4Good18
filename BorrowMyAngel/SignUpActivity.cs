@@ -31,7 +31,7 @@ namespace BorrowMyAngel
             else
             if (v.Id == Resource.Id.signup_btn_forget_password)
             {
-                StartActivity(new Intent(this, typeof(ForgetPasswordActivity)));
+                StartActivity(new Intent(this, typeof(ForgotPasswordActivity)));
                 
             }
             else
