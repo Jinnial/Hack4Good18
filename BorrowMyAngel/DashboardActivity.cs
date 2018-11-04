@@ -7,13 +7,15 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
-using static Android.Views.View;
+using System;
+
 
 namespace BorrowMyAngel
 {
-    [Activity(Label = "DashBoard", Theme = "@style/AppTheme")]
-    public class DashBoardActivity : AppCompatActivity, IOnClickListener, IOnCompleteListener
+    [Activity(Label = "Dashboard", Theme = "@style/AppTheme")]
+    public class DashBoardActivity : AppCompatActivity
     {
+        string id;
         TextView txtWelcome;
         EditText input_new_password;
         Button btnChangePass, btnLogout;
@@ -45,27 +47,22 @@ namespace BorrowMyAngel
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Dashboard);
-            //Init Firebase  
-            auth = FirebaseAuth.GetInstance(LoginActivity.app);
-            //View  
-            btnChangePass = FindViewById<Button>(Resource.Id.dashboard_btn_change_pass);
-            txtWelcome = FindViewById<TextView>(Resource.Id.dashboard_welcome);
-            btnLogout = FindViewById<Button>(Resource.Id.dashboard_btn_logout);
-            input_new_password = FindViewById<EditText>(Resource.Id.dashboard_newpassword);
-            activity_dashboard = FindViewById<RelativeLayout>(Resource.Id.activity_dashboard);
-            btnChangePass.SetOnClickListener(this);
-            btnLogout.SetOnClickListener(this);
-            //Check Session  
-            if (auth != null)
-                txtWelcome.Text = "Welcome , " + auth.CurrentUser.Email;
+
+            // get the ID
+            id = Intent.GetStringExtra("id") ?? string.Empty;
+
+            Button startCall = FindViewById<Button>(Resource.Id.startCall);
+            startCall.Click += StartCall_Click;
         }
-        public void OnComplete(Task task)
+       
+
+        private void StartCall_Click(object sender, EventArgs e)
         {
-            if (task.IsSuccessful == true)
-            {
-                Snackbar snackbar = Snackbar.Make(activity_dashboard, "Password has been Changed!", Snackbar.LengthShort);
-                snackbar.Show();
-            }
+            var intent = new Intent(this, typeof(AudioCallActivity));
+            StartActivity(intent);
+
+         
         }
+
     }
 }

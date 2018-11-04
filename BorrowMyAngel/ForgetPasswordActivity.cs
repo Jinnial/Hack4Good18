@@ -53,13 +53,12 @@ namespace BorrowMyAngel
         {
             if (task.IsSuccessful == false)
             {
-                Snackbar snackbar = Snackbar.Make(activity_forget, "Reset Password Failed!", Snackbar.LengthShort);
-                snackbar.Show();
+                Toast.MakeText(this, "Reset Password Failed!", ToastLength.Long).Show();
+
             }
             else
             {
-                Snackbar snackbar = Snackbar.Make(activity_forget, "Reset Password link send to email : " + input_email.Text, Snackbar.LengthShort);
-                snackbar.Show();
+               
             }
         }
     }

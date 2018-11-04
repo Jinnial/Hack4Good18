@@ -8,12 +8,11 @@ using static Android.Views.View;
 using Android.Views;
 using Android.Gms.Tasks;
 using Android.Support.Design.Widget;
-
-
+using Android.Content;
 
 namespace BorrowMyAngel
 {
-    [Activity(Label = "XamarinFirebaseAuth", MainLauncher = true, Theme = "@style/")]
+    [Activity(Label = "XamarinFirebaseAuth", Theme = "@style/AppTheme")]
     public class LoginActivity : Activity, IOnCompleteListener
     {
         Button btnLogin;
@@ -77,13 +76,26 @@ namespace BorrowMyAngel
         {
             if (task.IsSuccessful)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(DashBoardActivity)));
+                //get their uID
+                FirebaseUser user = auth.CurrentUser;
+                string id = user.Uid;
+
+                //find out which app role they have so we send them to the right dashboard
+                //if they are a user 
+                var intent = new Intent(this, typeof(DashBoardActivity));
+                intent.PutExtra("id", id);
+                StartActivity(intent);
                 Finish();
+
+                //if they are an angel
+                //var intent = new Intent(this, typeof(AngelDashboardActivity));
+                //intent.PutExtra("id", id);
+                //StartActivity(intent);
+                //Finish();
             }
             else
             {
-                Snackbar snackbar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
-                snackbar.Show();
+                Toast.MakeText(this, "Login Failed", ToastLength.Long).Show();
             }
         }
 

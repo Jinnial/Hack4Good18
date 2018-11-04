@@ -170,9 +170,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AngelDashboardActivity.cs" />
+    <Compile Include="AudioCallActivity.cs" />
     <Compile Include="Auth.cs" />
     <Compile Include="DashboardActivity.cs" />
     <Compile Include="ForgetPasswordActivity.cs" />
+    <Compile Include="GuestDashboardActivity.cs" />
     <Compile Include="LegalDisclaimerActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -184,7 +187,9 @@
   <ItemGroup>
     <None Include="google-services.json" />
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -252,6 +257,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\emergency_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\AudioCall.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="packages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\GuestDashboard.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\AngelDashboard.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="packages\Xamarin.Build.Download.0.4.9\build\Xamarin.Build.Download.targets" Condition="Exists('packages\Xamarin.Build.Download.0.4.9\build\Xamarin.Build.Download.targets')" />
