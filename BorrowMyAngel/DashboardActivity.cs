@@ -31,7 +31,7 @@ namespace BorrowMyAngel
             auth.SignOut();
             if (auth.CurrentUser == null)
             {
-                StartActivity(new Intent(this, typeof(MainActivity)));
+                StartActivity(new Intent(this, typeof(SignUpActivity)));
                 Finish();
             }
         }

@@ -23,7 +23,7 @@ namespace BorrowMyAngel
         {
             if (v.Id == Resource.Id.forget_btn_back)
             {
-                StartActivity(new Intent(this, typeof(MainActivity)));
+                StartActivity(new Intent(this, typeof(SignUpActivity)));
                 Finish();
             }
             else if (v.Id == Resource.Id.forget_btn_reset)

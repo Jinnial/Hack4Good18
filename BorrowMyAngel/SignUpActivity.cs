@@ -25,7 +25,7 @@ namespace BorrowMyAngel
         {
             if (v.Id == Resource.Id.signup_btn_login)
             {
-                StartActivity(new Intent(this, typeof(MainActivity)));
+                StartActivity(new Intent(this, typeof(SignUpActivity)));
                 Finish();
             }
             else

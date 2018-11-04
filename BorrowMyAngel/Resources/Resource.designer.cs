@@ -2279,26 +2279,26 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020082
-			public const int avd_hide_password_1 = 2130837634;
-			
 			// aapt resource value: 0x7f020083
-			public const int avd_hide_password_2 = 2130837635;
+			public const int avd_hide_password_1 = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int avd_hide_password_3 = 2130837636;
+			public const int avd_hide_password_2 = 2130837636;
+			
+			// aapt resource value: 0x7f020085
+			public const int avd_hide_password_3 = 2130837637;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020085
-			public const int avd_show_password_1 = 2130837637;
-			
 			// aapt resource value: 0x7f020086
-			public const int avd_show_password_2 = 2130837638;
+			public const int avd_show_password_1 = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int avd_show_password_3 = 2130837639;
+			public const int avd_show_password_2 = 2130837639;
+			
+			// aapt resource value: 0x7f020088
+			public const int avd_show_password_3 = 2130837640;
 			
 			// aapt resource value: 0x7f020055
 			public const int common_full_open_on_phone = 2130837589;
@@ -2358,82 +2358,85 @@ namespace BorrowMyAngel
 			public const int common_google_signin_btn_text_light_normal_background = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int design_bottom_navigation_item_background = 2130837608;
+			public const int dark_splash = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int design_fab_background = 2130837609;
+			public const int design_bottom_navigation_item_background = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int design_ic_visibility = 2130837610;
+			public const int design_fab_background = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int design_ic_visibility_off = 2130837611;
+			public const int design_ic_visibility = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int design_password_eye = 2130837612;
+			public const int design_ic_visibility_off = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int design_snackbar_background = 2130837613;
+			public const int design_password_eye = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int googleg_disabled_color_18 = 2130837614;
+			public const int design_snackbar_background = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int googleg_standard_color_18 = 2130837615;
+			public const int googleg_disabled_color_18 = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int logo = 2130837616;
+			public const int googleg_standard_color_18 = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int navigation_empty_icon = 2130837617;
+			public const int logo = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int notification_action_background = 2130837618;
+			public const int navigation_empty_icon = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int notification_bg = 2130837619;
+			public const int notification_action_background = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int notification_bg_low = 2130837620;
+			public const int notification_bg = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int notification_bg_low_normal = 2130837621;
+			public const int notification_bg_low = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int notification_bg_low_pressed = 2130837622;
+			public const int notification_bg_low_normal = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int notification_bg_normal = 2130837623;
+			public const int notification_bg_low_pressed = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int notification_bg_normal_pressed = 2130837624;
+			public const int notification_bg_normal = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int notification_icon_background = 2130837625;
-			
-			// aapt resource value: 0x7f020080
-			public const int notification_template_icon_bg = 2130837632;
-			
-			// aapt resource value: 0x7f020081
-			public const int notification_template_icon_low_bg = 2130837633;
+			public const int notification_bg_normal_pressed = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int notification_tile_bg = 2130837626;
+			public const int notification_icon_background = 2130837626;
+			
+			// aapt resource value: 0x7f020081
+			public const int notification_template_icon_bg = 2130837633;
+			
+			// aapt resource value: 0x7f020082
+			public const int notification_template_icon_low_bg = 2130837634;
 			
 			// aapt resource value: 0x7f02007b
-			public const int notify_panel_notification_icon_bg = 2130837627;
+			public const int notification_tile_bg = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int splash_screen = 2130837628;
+			public const int notify_panel_notification_icon_bg = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int splashLogo = 2130837629;
+			public const int splash_screen = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int tooltip_frame_dark = 2130837630;
+			public const int splashLogo = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int tooltip_frame_light = 2130837631;
+			public const int tooltip_frame_dark = 2130837631;
+			
+			// aapt resource value: 0x7f020080
+			public const int tooltip_frame_light = 2130837632;
 			
 			static Drawable()
 			{
@@ -2466,8 +2469,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c003f
 			public const int SYM = 2131492927;
 			
-			// aapt resource value: 0x7f0c00bb
-			public const int action0 = 2131493051;
+			// aapt resource value: 0x7f0c00ba
+			public const int action0 = 2131493050;
 			
 			// aapt resource value: 0x7f0c0083
 			public const int action_bar = 2131492995;
@@ -2490,17 +2493,17 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0061
 			public const int action_bar_title = 2131492961;
 			
-			// aapt resource value: 0x7f0c00b8
-			public const int action_container = 2131493048;
+			// aapt resource value: 0x7f0c00b7
+			public const int action_container = 2131493047;
 			
 			// aapt resource value: 0x7f0c0084
 			public const int action_context_bar = 2131492996;
 			
-			// aapt resource value: 0x7f0c00bf
-			public const int action_divider = 2131493055;
+			// aapt resource value: 0x7f0c00be
+			public const int action_divider = 2131493054;
 			
-			// aapt resource value: 0x7f0c00b9
-			public const int action_image = 2131493049;
+			// aapt resource value: 0x7f0c00b8
+			public const int action_image = 2131493048;
 			
 			// aapt resource value: 0x7f0c0003
 			public const int action_menu_divider = 2131492867;
@@ -2517,11 +2520,11 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0063
 			public const int action_mode_close_button = 2131492963;
 			
-			// aapt resource value: 0x7f0c00ba
-			public const int action_text = 2131493050;
+			// aapt resource value: 0x7f0c00b9
+			public const int action_text = 2131493049;
 			
-			// aapt resource value: 0x7f0c00c8
-			public const int actions = 2131493064;
+			// aapt resource value: 0x7f0c00c7
+			public const int actions = 2131493063;
 			
 			// aapt resource value: 0x7f0c0064
 			public const int activity_chooser_view_content = 2131492964;
@@ -2535,8 +2538,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c00ae
 			public const int activity_main = 2131493038;
 			
-			// aapt resource value: 0x7f0c00cb
-			public const int activity_sign_up = 2131493067;
+			// aapt resource value: 0x7f0c00ca
+			public const int activity_sign_up = 2131493066;
 			
 			// aapt resource value: 0x7f0c002f
 			public const int add = 2131492911;
@@ -2547,11 +2550,11 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c001e
 			public const int adjust_width = 2131492894;
 			
-			// aapt resource value: 0x7f0c00dd
-			public const int ageBox = 2131493085;
-			
 			// aapt resource value: 0x7f0c00dc
-			public const int ageBox1 = 2131493084;
+			public const int ageBox = 2131493084;
+			
+			// aapt resource value: 0x7f0c00db
+			public const int ageBox1 = 2131493083;
 			
 			// aapt resource value: 0x7f0c00ad
 			public const int agreeButton = 2131493037;
@@ -2583,8 +2586,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c006a
 			public const int buttonPanel = 2131492970;
 			
-			// aapt resource value: 0x7f0c00bc
-			public const int cancel_action = 2131493052;
+			// aapt resource value: 0x7f0c00bb
+			public const int cancel_action = 2131493051;
 			
 			// aapt resource value: 0x7f0c004c
 			public const int center = 2131492940;
@@ -2598,8 +2601,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c007a
 			public const int checkbox = 2131492986;
 			
-			// aapt resource value: 0x7f0c00c4
-			public const int chronometer = 2131493060;
+			// aapt resource value: 0x7f0c00c3
+			public const int chronometer = 2131493059;
 			
 			// aapt resource value: 0x7f0c0055
 			public const int clip_horizontal = 2131492949;
@@ -2670,14 +2673,14 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0085
 			public const int edit_query = 2131492997;
 			
-			// aapt resource value: 0x7f0c00d7
-			public const int emailView = 2131493079;
+			// aapt resource value: 0x7f0c00d6
+			public const int emailView = 2131493078;
 			
 			// aapt resource value: 0x7f0c0038
 			public const int end = 2131492920;
 			
-			// aapt resource value: 0x7f0c00ca
-			public const int end_padder = 2131493066;
+			// aapt resource value: 0x7f0c00c9
+			public const int end_padder = 2131493065;
 			
 			// aapt resource value: 0x7f0c0047
 			public const int enterAlways = 2131492935;
@@ -2694,8 +2697,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0079
 			public const int expanded_menu = 2131492985;
 			
-			// aapt resource value: 0x7f0c00e1
-			public const int femaleButton = 2131493089;
+			// aapt resource value: 0x7f0c00e0
+			public const int femaleButton = 2131493088;
 			
 			// aapt resource value: 0x7f0c0057
 			public const int fill = 2131492951;
@@ -2706,8 +2709,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c004f
 			public const int fill_vertical = 2131492943;
 			
-			// aapt resource value: 0x7f0c00d9
-			public const int firstNameBox = 2131493081;
+			// aapt resource value: 0x7f0c00d8
+			public const int firstNameBox = 2131493080;
 			
 			// aapt resource value: 0x7f0c005b
 			public const int @fixed = 2131492955;
@@ -2730,8 +2733,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c00a7
 			public const int forget_message = 2131493031;
 			
-			// aapt resource value: 0x7f0c00df
-			public const int genderGroup = 2131493087;
+			// aapt resource value: 0x7f0c00de
+			public const int genderGroup = 2131493086;
 			
 			// aapt resource value: 0x7f0c000a
 			public const int ghost_view = 2131492874;
@@ -2745,8 +2748,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0069
 			public const int icon = 2131492969;
 			
-			// aapt resource value: 0x7f0c00c9
-			public const int icon_group = 2131493065;
+			// aapt resource value: 0x7f0c00c8
+			public const int icon_group = 2131493064;
 			
 			// aapt resource value: 0x7f0c0020
 			public const int icon_only = 2131492896;
@@ -2757,8 +2760,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0066
 			public const int image = 2131492966;
 			
-			// aapt resource value: 0x7f0c00c5
-			public const int info = 2131493061;
+			// aapt resource value: 0x7f0c00c4
+			public const int info = 2131493060;
 			
 			// aapt resource value: 0x7f0c0060
 			public const int italic = 2131492960;
@@ -2811,17 +2814,17 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c00b2
 			public const int login_password = 2131493042;
 			
-			// aapt resource value: 0x7f0c00e0
-			public const int maleButton = 2131493088;
+			// aapt resource value: 0x7f0c00df
+			public const int maleButton = 2131493087;
 			
-			// aapt resource value: 0x7f0c00e5
-			public const int masked = 2131493093;
+			// aapt resource value: 0x7f0c00e4
+			public const int masked = 2131493092;
 			
-			// aapt resource value: 0x7f0c00be
-			public const int media_actions = 2131493054;
+			// aapt resource value: 0x7f0c00bd
+			public const int media_actions = 2131493053;
 			
-			// aapt resource value: 0x7f0c00d4
-			public const int message = 2131493076;
+			// aapt resource value: 0x7f0c00d3
+			public const int message = 2131493075;
 			
 			// aapt resource value: 0x7f0c0039
 			public const int middle = 2131492921;
@@ -2832,20 +2835,17 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0030
 			public const int multiply = 2131492912;
 			
-			// aapt resource value: 0x7f0c00b7
-			public const int myButton = 2131493047;
-			
 			// aapt resource value: 0x7f0c00a0
 			public const int navigation_header_container = 2131493024;
 			
-			// aapt resource value: 0x7f0c00e2
-			public const int nbButton = 2131493090;
+			// aapt resource value: 0x7f0c00e1
+			public const int nbButton = 2131493089;
 			
 			// aapt resource value: 0x7f0c0043
 			public const int never = 2131492931;
 			
-			// aapt resource value: 0x7f0c00db
-			public const int nicknameBox = 2131493083;
+			// aapt resource value: 0x7f0c00da
+			public const int nicknameBox = 2131493082;
 			
 			// aapt resource value: 0x7f0c001f
 			public const int none = 2131492895;
@@ -2853,14 +2853,14 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0027
 			public const int normal = 2131492903;
 			
-			// aapt resource value: 0x7f0c00c7
-			public const int notification_background = 2131493063;
-			
-			// aapt resource value: 0x7f0c00c1
-			public const int notification_main_column = 2131493057;
+			// aapt resource value: 0x7f0c00c6
+			public const int notification_background = 2131493062;
 			
 			// aapt resource value: 0x7f0c00c0
-			public const int notification_main_column_container = 2131493056;
+			public const int notification_main_column = 2131493056;
+			
+			// aapt resource value: 0x7f0c00bf
+			public const int notification_main_column_container = 2131493055;
 			
 			// aapt resource value: 0x7f0c0053
 			public const int parallax = 2131492947;
@@ -2886,11 +2886,11 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0051
 			public const int right = 2131492945;
 			
-			// aapt resource value: 0x7f0c00c6
-			public const int right_icon = 2131493062;
+			// aapt resource value: 0x7f0c00c5
+			public const int right_icon = 2131493061;
 			
-			// aapt resource value: 0x7f0c00c2
-			public const int right_side = 2131493058;
+			// aapt resource value: 0x7f0c00c1
+			public const int right_side = 2131493057;
 			
 			// aapt resource value: 0x7f0c000c
 			public const int save_image_matrix = 2131492876;
@@ -2964,29 +2964,29 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c002d
 			public const int showTitle = 2131492909;
 			
-			// aapt resource value: 0x7f0c00d1
-			public const int signup_btn_forget_password = 2131493073;
-			
-			// aapt resource value: 0x7f0c00d3
-			public const int signup_btn_login = 2131493075;
-			
 			// aapt resource value: 0x7f0c00d0
-			public const int signup_btn_register = 2131493072;
-			
-			// aapt resource value: 0x7f0c00cd
-			public const int signup_email = 2131493069;
-			
-			// aapt resource value: 0x7f0c00cc
-			public const int signup_input_email = 2131493068;
-			
-			// aapt resource value: 0x7f0c00ce
-			public const int signup_input_password = 2131493070;
+			public const int signup_btn_forget_password = 2131493072;
 			
 			// aapt resource value: 0x7f0c00d2
-			public const int signup_layout_or = 2131493074;
+			public const int signup_btn_login = 2131493074;
 			
 			// aapt resource value: 0x7f0c00cf
-			public const int signup_password = 2131493071;
+			public const int signup_btn_register = 2131493071;
+			
+			// aapt resource value: 0x7f0c00cc
+			public const int signup_email = 2131493068;
+			
+			// aapt resource value: 0x7f0c00cb
+			public const int signup_input_email = 2131493067;
+			
+			// aapt resource value: 0x7f0c00cd
+			public const int signup_input_password = 2131493069;
+			
+			// aapt resource value: 0x7f0c00d1
+			public const int signup_layout_or = 2131493073;
+			
+			// aapt resource value: 0x7f0c00ce
+			public const int signup_password = 2131493070;
 			
 			// aapt resource value: 0x7f0c0098
 			public const int smallLabel = 2131493016;
@@ -3021,14 +3021,14 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0052
 			public const int start = 2131492946;
 			
-			// aapt resource value: 0x7f0c00bd
-			public const int status_bar_latest_event_content = 2131493053;
+			// aapt resource value: 0x7f0c00bc
+			public const int status_bar_latest_event_content = 2131493052;
 			
 			// aapt resource value: 0x7f0c007d
 			public const int submenuarrow = 2131492989;
 			
-			// aapt resource value: 0x7f0c00e3
-			public const int submitButton = 2131493091;
+			// aapt resource value: 0x7f0c00e2
+			public const int submitButton = 2131493090;
 			
 			// aapt resource value: 0x7f0c008e
 			public const int submit_area = 2131493006;
@@ -3054,20 +3054,20 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c00ac
 			public const int textView1 = 2131493036;
 			
-			// aapt resource value: 0x7f0c00d8
-			public const int textView2 = 2131493080;
+			// aapt resource value: 0x7f0c00d7
+			public const int textView2 = 2131493079;
 			
-			// aapt resource value: 0x7f0c00da
-			public const int textView3 = 2131493082;
+			// aapt resource value: 0x7f0c00d9
+			public const int textView3 = 2131493081;
 			
-			// aapt resource value: 0x7f0c00de
-			public const int textView5 = 2131493086;
-			
-			// aapt resource value: 0x7f0c00d6
-			public const int textView6 = 2131493078;
+			// aapt resource value: 0x7f0c00dd
+			public const int textView5 = 2131493085;
 			
 			// aapt resource value: 0x7f0c00d5
-			public const int textView7 = 2131493077;
+			public const int textView6 = 2131493077;
+			
+			// aapt resource value: 0x7f0c00d4
+			public const int textView7 = 2131493076;
 			
 			// aapt resource value: 0x7f0c00a5
 			public const int text_input_password_toggle = 2131493029;
@@ -3078,8 +3078,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0015
 			public const int textinput_error = 2131492885;
 			
-			// aapt resource value: 0x7f0c00c3
-			public const int time = 2131493059;
+			// aapt resource value: 0x7f0c00c2
+			public const int time = 2131493058;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int title = 2131492892;
@@ -3126,8 +3126,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0016
 			public const int view_offset_helper = 2131492886;
 			
-			// aapt resource value: 0x7f0c00e4
-			public const int visible = 2131493092;
+			// aapt resource value: 0x7f0c00e3
+			public const int visible = 2131493091;
 			
 			// aapt resource value: 0x7f0c0022
 			public const int wide = 2131492898;
@@ -3330,73 +3330,70 @@ namespace BorrowMyAngel
 			public const int Login = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int Main = 2130968620;
+			public const int notification_action = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int notification_action = 2130968621;
+			public const int notification_action_tombstone = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_action_tombstone = 2130968622;
+			public const int notification_media_action = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_media_action = 2130968623;
+			public const int notification_media_cancel_action = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_media_cancel_action = 2130968624;
+			public const int notification_template_big_media = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_big_media = 2130968625;
+			public const int notification_template_big_media_custom = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_big_media_custom = 2130968626;
+			public const int notification_template_big_media_narrow = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_big_media_narrow = 2130968627;
+			public const int notification_template_big_media_narrow_custom = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media_narrow_custom = 2130968628;
+			public const int notification_template_custom_big = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_custom_big = 2130968629;
+			public const int notification_template_icon_group = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_icon_group = 2130968630;
+			public const int notification_template_lines_media = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_lines_media = 2130968631;
+			public const int notification_template_media = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_media = 2130968632;
+			public const int notification_template_media_custom = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_media_custom = 2130968633;
+			public const int notification_template_part_chronometer = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_part_chronometer = 2130968634;
+			public const int notification_template_part_time = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_part_time = 2130968635;
+			public const int select_dialog_item_material = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int select_dialog_item_material = 2130968636;
+			public const int select_dialog_multichoice_material = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int select_dialog_multichoice_material = 2130968637;
+			public const int select_dialog_singlechoice_material = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int select_dialog_singlechoice_material = 2130968638;
+			public const int SignUp = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int SignUp = 2130968639;
+			public const int support_simple_spinner_dropdown_item = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int support_simple_spinner_dropdown_item = 2130968640;
+			public const int tooltip = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int tooltip = 2130968641;
-			
-			// aapt resource value: 0x7f040042
-			public const int UserProfile = 2130968642;
+			public const int UserProfile = 2130968641;
 			
 			static Layout()
 			{
@@ -3539,8 +3536,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f090022
 			public const int abc_toolbar_collapse_description = 2131296290;
 			
-			// aapt resource value: 0x7f09003c
-			public const int app_name = 2131296316;
+			// aapt resource value: 0x7f09003b
+			public const int app_name = 2131296315;
 			
 			// aapt resource value: 0x7f090030
 			public const int appbar_scrolling_view_behavior = 2131296304;
@@ -3604,9 +3601,6 @@ namespace BorrowMyAngel
 			
 			// aapt resource value: 0x7f090011
 			public const int fcm_fallback_notification_channel_label = 2131296273;
-			
-			// aapt resource value: 0x7f09003b
-			public const int hello = 2131296315;
 			
 			// aapt resource value: 0x7f090033
 			public const int password_toggle_content_description = 2131296307;

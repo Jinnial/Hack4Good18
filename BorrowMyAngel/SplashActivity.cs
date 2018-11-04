@@ -19,10 +19,9 @@ namespace BorrowMyAngel {
     {
         static readonly string TAG = "X: " + typeof(SplashActivity).Name;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
         {
-            base.OnCreate(savedInstanceState);
-
+            base.OnCreate(savedInstanceState, persistentState);
             // Create your application here
             Log.Debug(TAG, "OnCreate for Splash Activity");
         }
@@ -30,21 +29,22 @@ namespace BorrowMyAngel {
         protected override void OnResume()
         {
             base.OnResume();
-
-            Task startupWork = new Task(() =>
-            {
                 Log.Debug(TAG, "Performing some startup work...");
                 //Task.Delay(5000); //delay while we show the splash screen
-                Log.Debug(TAG, "Done waiting");
-                StartActivity(new Intent(Application.Context, typeof(SignUpActivity)));
-            });
-            //what do we want to do when we're done waiting?
-            //launch the main activity!
-            //startupWork.ContinueWith(t =>
-            //{
-            //    //Log.Debug(TAG, "Waiting done, launching main activity");
-            //    StartActivity(new Intent(Application.Context, typeof(MainActivity)));
-            //}, TaskScheduler.FromCurrentSynchronizationContext());
+                Task startupWork = new Task(() => { DoStartup(); });
+            //Log.Debug(TAG, "Done waiting");
+            
+                startupWork.Start();
+            
         }
+        async void DoStartup() {
+            Log.Debug(TAG, "Waiting done, launching main activity");
+            await Task.Delay (3000);
+            Log.Debug(TAG, "Startup work is finished - starting SignUpActivity.");
+            StartActivity(new Intent(Application.Context, typeof (SignUpActivity)));
+            //OverridePendingTransition(0, Resource.Animation.splash_fade);
+        }
+
+        public override void OnBackPressed() { }
     }
 }

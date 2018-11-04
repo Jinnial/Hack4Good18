@@ -7,7 +7,7 @@
   </style>
  <style name="AppTheme" parent="AppTheme.Base"></style>
   <style name="AppTheme.Splash" parent="Theme.AppCompat.Light">
-    <item name="android:windowBackground">@drawable/splashLogo</item>
+    <item name="android:windowBackground">@drawable/dark_splash</item>
     <item name="android:windowNoTitle">true</item>
   </style>
 </resources>
