@@ -23,7 +23,7 @@ namespace BorrowMyAngel
         public MessageData(string data, DateTime timestamp, string uID)
         {
             this.data = data;
-            this.timestamp = timestamp.ToShortDateString();
+            this.timestamp = timestamp.ToShortTimeString();
             this.uID = uID;
         }
     }
@@ -78,14 +78,8 @@ namespace BorrowMyAngel
             auth = FirebaseAuth.GetInstance(Auth.app);
             FirebaseDatabase db = FirebaseDatabase.GetInstance(Auth.app, "https://borrowmyangel-9cb04.firebaseio.com/");
             this.chatID = "chatSessions/" + chatID;
-            db.GetReference(this.chatID + "/users/angel").SetValue(auth.Uid).;
-
+            db.GetReference(this.chatID + "/users/angel").SetValue(auth.Uid);
             db.GoOnline();
-        }
-
-        public void StartChat(String angel, )
-        {
-
         }
     }
 }
