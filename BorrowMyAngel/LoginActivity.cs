@@ -62,7 +62,7 @@ namespace BorrowMyAngel
         private void SignUp_Click(object sender, EventArgs e)
         {
             StartActivity(new Android.Content.Intent(this, typeof(SignUpActivity)));
-          
+
         }
 
         private void AngelSignUp_Click(object sender, EventArgs e)
@@ -89,12 +89,13 @@ namespace BorrowMyAngel
         private void Forgot_Click(object sender, EventArgs e)
         {
             StartActivity(new Android.Content.Intent(this, typeof(ForgotPasswordActivity)));
-           
+
         }
 
-        private void Angel_Click(object sender, EventArgs e) {
+        private void Angel_Click(object sender, EventArgs e)
+        {
             StartActivity(new Android.Content.Intent(this, typeof(GuestDashboardActivity)));
-            
+
         }
 
 
@@ -114,7 +115,7 @@ namespace BorrowMyAngel
                 //currently hard-coded for demo
                 string angelId = "z31cp6TuFvVTAppIcrrSpJLi6AJ2";
 
-                if(angelId == "z31cp6TuFvVTAppIcrrSpJLi6AJ2")
+                if (angelId == "z31cp6TuFvVTAppIcrrSpJLi6AJ2")
                 {
                     //if they are an angel
                     var intent = new Intent(this, typeof(AngelDashboardActivity));
@@ -130,9 +131,9 @@ namespace BorrowMyAngel
                     StartActivity(intent);
                     Finish();
                 }
-                
 
-                
+
+
             }
             else
             {
@@ -140,6 +141,6 @@ namespace BorrowMyAngel
             }
         }
 
-  
+
     }
 }
