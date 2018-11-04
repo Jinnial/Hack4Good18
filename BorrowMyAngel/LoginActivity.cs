@@ -16,7 +16,7 @@ namespace BorrowMyAngel
     public class LoginActivity : Activity, IOnCompleteListener
     {
         Button btnLogin;
-        Button btnAngel;
+        ImageButton btnAngel;
         EditText input_email, input_password;
         TextView btnSignUp, btnForgetPassword;
         RelativeLayout activity_main;
@@ -36,7 +36,7 @@ namespace BorrowMyAngel
             btnSignUp = FindViewById<TextView>(Resource.Id.login_btn_sign_up);
             btnForgetPassword = FindViewById<TextView>(Resource.Id.login_btn_forget_password);
             activity_main = FindViewById<RelativeLayout>(Resource.Id.activity_main);
-            btnAngel = FindViewById<Button>(Resource.Id.emergency);
+            btnAngel = FindViewById<ImageButton>(Resource.Id.emergency);
             btnSignUp.Click += SignUp_Click;
             btnLogin.Click += Login_Click;
             btnForgetPassword.Click += Forgot_Click;
@@ -72,7 +72,7 @@ namespace BorrowMyAngel
 
         private void Angel_Click(object sender, EventArgs e) {
             StartActivity(new Android.Content.Intent(this, typeof(GuestDashboardActivity)));
-            Finish();
+            
         }
 
 

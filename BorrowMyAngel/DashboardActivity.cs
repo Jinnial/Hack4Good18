@@ -12,32 +12,11 @@ using System;
 
 namespace BorrowMyAngel {
     [Activity(Label = "Dashboard", Theme = "@style/AppTheme")]
-    public class DashBoardActivity : AppCompatActivity, IOnCompleteListener {
+    public class DashBoardActivity : AppCompatActivity
+    {
         string id;
-        TextView txtWelcome;
-        EditText input_new_password;
-        Button btnChangePass, btnLogout;
-        RelativeLayout activity_dashboard;
-        FirebaseAuth auth;
-        public void OnClick(View v) {
-            //if (v.Id == Resource.Id.dashboard_btn_change_pass)
-            //    ChangePassword(input_new_password.Text);
-            //else if (v.Id == Resource.Id.dashboard_btn_logout)
-            //    LogoutUser();
-        }
-        private void LogoutUser() {
-            auth.SignOut();
-            if (auth.CurrentUser == null) {
-                StartActivity(new Intent(this, typeof(SignUpActivity)));
-                Finish();
-            }
-        }
-        private void ChangePassword(string newPassword) {
-            FirebaseUser user = auth.CurrentUser;
-            user.UpdatePassword(newPassword)
-            .AddOnCompleteListener(this);
-        }
-        protected override void OnCreate(Bundle savedInstanceState) {
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Dashboard);
 
@@ -49,18 +28,13 @@ namespace BorrowMyAngel {
         }
 
 
-        private void StartCall_Click(object sender, EventArgs e) {
+        private void StartCall_Click(object sender, EventArgs e)
+        {
             var intent = new Intent(this, typeof(AudioCallActivity));
             StartActivity(intent);
 
 
         }
 
-        public void OnComplete(Task task) {
-            if (task.IsSuccessful == true) {
-                Snackbar snackbar = Snackbar.Make(activity_dashboard, "Password has been Changed!", Snackbar.LengthShort);
-                snackbar.Show();
-            }
-        }
     }
 }
