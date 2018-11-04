@@ -16,6 +16,14 @@ namespace BorrowMyAngel {
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
             // Create your application here
+            SetContentView(Resource.Layout.Importance);
+            Button btnConnect = FindViewById<Button>(Resource.Id.btn_connect);
+            btnConnect.Click += Connect_Click;
+        }
+        private void Connect_Click(object sender, EventArgs e) {
+            //TODO: Link to call
+            //StartActivity(new Android.Content.Intent(this, typeof(SignUpActivity)));
+
         }
     }
 }
