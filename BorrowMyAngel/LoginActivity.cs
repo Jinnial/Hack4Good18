@@ -111,17 +111,28 @@ namespace BorrowMyAngel
                 string id = user.Uid;
 
                 //find out which app role they have so we send them to the right dashboard
-                //if they are a user 
-                var intent = new Intent(ApplicationContext, typeof(DashBoardActivity));
-                intent.PutExtra("id", id);
-                StartActivity(intent);
-                Finish();
+                //currently hard-coded for demo
+                string angelId = "z31cp6TuFvVTAppIcrrSpJLi6AJ2";
 
-                //if they are an angel
-                //var intent = new Intent(this, typeof(AngelDashboardActivity));
-                //intent.PutExtra("id", id);
-                //StartActivity(intent);
-                //Finish();
+                if(angelId == "z31cp6TuFvVTAppIcrrSpJLi6AJ2")
+                {
+                    //if they are an angel
+                    var intent = new Intent(this, typeof(AngelDashboardActivity));
+                    intent.PutExtra("id", id);
+                    StartActivity(intent);
+                    Finish();
+                }
+                else
+                {
+                    //if they are a user 
+                    var intent = new Intent(ApplicationContext, typeof(DashBoardActivity));
+                    intent.PutExtra("id", id);
+                    StartActivity(intent);
+                    Finish();
+                }
+                
+
+                
             }
             else
             {
