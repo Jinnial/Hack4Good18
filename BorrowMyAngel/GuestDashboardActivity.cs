@@ -18,7 +18,7 @@ namespace BorrowMyAngel
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Dashboard);
+            SetContentView(Resource.Layout.GuestDashboard);
 
             Button startCall = FindViewById<Button>(Resource.Id.startCall);
             startCall.Click += StartCall_Click;

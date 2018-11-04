@@ -56,7 +56,7 @@ namespace BorrowMyAngel
         private void SignUp_Click(object sender, EventArgs e)
         {
             StartActivity(new Android.Content.Intent(this, typeof(SignUpActivity)));
-            Finish();
+          
         }
 
         private void Login_Click(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace BorrowMyAngel
         private void Forgot_Click(object sender, EventArgs e)
         {
             StartActivity(new Android.Content.Intent(this, typeof(ForgetPasswordActivity)));
-            Finish();
+           
         }
 
         private void Angel_Click(object sender, EventArgs e) {

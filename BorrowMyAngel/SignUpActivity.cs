@@ -26,13 +26,13 @@ namespace BorrowMyAngel
             if (v.Id == Resource.Id.signup_btn_login)
             {
                 StartActivity(new Intent(this, typeof(LoginActivity)));
-                Finish();
+               
             }
             else
             if (v.Id == Resource.Id.signup_btn_forget_password)
             {
                 StartActivity(new Intent(this, typeof(ForgetPasswordActivity)));
-                Finish();
+                
             }
             else
             if (v.Id == Resource.Id.signup_btn_register)
