@@ -72,13 +72,12 @@ namespace BorrowMyAngel
                 //insert into database
                 WriteRecord(user);
 
-                //Snackbar snackbar = Snackbar.Make(activity_sign_up, "Register Successfully ", Snackbar.LengthShort);
-                //snackbar.Show();
+                Toast.MakeText(this, "Registration Successful", ToastLength.Long).Show();
             }
             else
             {
-               // Snackbar snackbar = Snackbar.Make(activity_sign_up, "Register Failed ", Snackbar.LengthShort);
-                //snackbar.Show();
+                Toast.MakeText(this, "Registration Failed", ToastLength.Long).Show();
+
             }
         }
 

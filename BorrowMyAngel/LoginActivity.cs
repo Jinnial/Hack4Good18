@@ -82,8 +82,7 @@ namespace BorrowMyAngel
             }
             else
             {
-                //Snackbar snackbar = Snackbar.Make(activity_main, "Login Failed ", Snackbar.LengthShort);
-                //snackbar.Show();
+                Toast.MakeText(this, "Login Failed", ToastLength.Long).Show();
             }
         }
 
