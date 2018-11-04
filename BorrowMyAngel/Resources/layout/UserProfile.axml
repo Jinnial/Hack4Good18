@@ -1,100 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">
-	<TextView
-		android:text="User Profile"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:id="@+id/textView1" />
-	<TextView
-		android:text="Information provided here in optional and is kept private. Profile information will not be shared. "
-		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="match_parent"
-		android:layout_height="82.5dp"
-		android:id="@+id/textView7" />
-
-	<TextView
-		android:text="Email: "
-		android:textAppearance="?android:attr/textAppearanceSmall"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/textView6" />
-		<TextView
-		android:text=""
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/emailView" />
-	<TextView
-		android:text="First Name:"
-		android:textAppearance="?android:attr/textAppearanceSmall"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/textView2" />
-	<EditText
-		android:inputType="textPersonName"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/firstNameBox" />
-	<TextView
-		android:text="Nick Name:"
-		android:textAppearance="?android:attr/textAppearanceSmall"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/textView3" />
-	<EditText
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/nicknameBox" />
-	<TextView
-		android:text="Age"
-		android:textAppearance="?android:attr/textAppearanceSmall"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/ageBox1" />
-	<EditText
-		android:inputType="number"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/ageBox" />
-	<TextView
-		android:text="Gender"
-		android:textAppearance="?android:attr/textAppearanceSmall"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/textView5" />
-	<RadioGroup
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/genderGroup">
-		<RadioButton
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:checked="true"
-			android:text="Male"
-			android:id="@+id/maleButton" />
-		<RadioButton
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Female"
-			android:id="@+id/femaleButton" />
-		<RadioButton
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Non-Binary"
-			android:id="@+id/nbButton" />
-	</RadioGroup>
-	<Button
-		android:text="Next"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/submitButton" />
-
-</LinearLayout>
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="match_parent"
+		android:layout_centerVertical="true"
+		android:layout_centerInParent="true">
+		<LinearLayout
+			android:orientation="vertical"
+			android:padding="16dp"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<TextView
+				android:text="User Profile"
+				android:textColor="@color/lightBlue"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:id="@+id/textView1" />
+			<TextView
+				android:text="Information provided here is optional and is kept private. Profile information will not be shared. "
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_width="match_parent"
+				android:layout_height="82.5dp"
+				android:id="@+id/textView7" />
+			
+			<TextView
+				android:text="Email: "
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/textView6" />
+				<TextView
+				android:text=""
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/emailView" />
+			
+			<TextView
+				android:text="First Name:"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/textView2" />
+			<EditText
+				android:inputType="textPersonName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/firstNameBox" />
+			<TextView
+				android:text="Nick Name:"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/textView3" />
+			<EditText
+				android:inputType="textPersonName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/nicknameBox" />
+			<TextView
+				android:text="Age"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/ageBox1" />
+			<EditText
+				android:inputType="number"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/ageBox" />
+			<TextView
+				android:text="Gender"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/textView5" />
+			<RadioGroup
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/genderGroup">
+				<RadioButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Male"
+					android:id="@+id/maleButton" />
+				<RadioButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Female"
+					android:id="@+id/femaleButton" />
+				<RadioButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Non-Binary"
+					android:id="@+id/nbButton" />
+			</RadioGroup>
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<CheckBox
+					android:id="@+id/locationPermission"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Share My Location"/>
+				<CheckBox
+					android:id="@+id/pushPermission"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Allow Push Notifications"/>
+				<CheckBox
+					android:id="@+id/micPermission"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Allow Microphone"/>
+			</LinearLayout>
+			<Button
+				android:layout_marginTop="10dp"
+				android:text="Next"
+				android:textColor="@color/primary_dark_material_dark"
+				android:background="@color/lightBlue"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/submitButton" />
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

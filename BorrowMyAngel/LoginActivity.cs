@@ -16,6 +16,7 @@ namespace BorrowMyAngel
     public class LoginActivity : Activity, IOnCompleteListener
     {
         Button btnLogin;
+        Button btnAngel;
         EditText input_email, input_password;
         TextView btnSignUp, btnForgetPassword;
         RelativeLayout activity_main;
@@ -35,9 +36,11 @@ namespace BorrowMyAngel
             btnSignUp = FindViewById<TextView>(Resource.Id.login_btn_sign_up);
             btnForgetPassword = FindViewById<TextView>(Resource.Id.login_btn_forget_password);
             activity_main = FindViewById<RelativeLayout>(Resource.Id.activity_main);
+            btnAngel = FindViewById<Button>(Resource.Id.emergency);
             btnSignUp.Click += SignUp_Click;
             btnLogin.Click += Login_Click;
             btnForgetPassword.Click += Forgot_Click;
+            btnAngel.Click += Angel_Click;
         }
         private void InitFirebaseAuth()
         {
@@ -67,6 +70,11 @@ namespace BorrowMyAngel
             Finish();
         }
 
+        private void Angel_Click(object sender, EventArgs e) {
+            StartActivity(new Android.Content.Intent(this, typeof(GuestDashboardActivity)));
+            Finish();
+        }
+
 
         private void LoginUser(string email, string password)
         {
@@ -82,7 +90,7 @@ namespace BorrowMyAngel
 
                 //find out which app role they have so we send them to the right dashboard
                 //if they are a user 
-                var intent = new Intent(this, typeof(DashBoardActivity));
+                var intent = new Intent(ApplicationContext, typeof(DashBoardActivity));
                 intent.PutExtra("id", id);
                 StartActivity(intent);
                 Finish();

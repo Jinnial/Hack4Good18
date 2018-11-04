@@ -24,7 +24,7 @@
 			<EditText
 				android:hint="Enter your Email"
 				android:id="@+id/login_email"
-				android:inputType="textCapWords"
+				android:inputType="textEmailAddress"
 				android:maxLines="1"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content" />
@@ -46,7 +46,7 @@
 			android:layout_below="@+id/login_input_password"
 			android:id="@+id/login_btn_login"
 			android:text="Login"
-			android:background="#263238"
+			android:background="@color/lightBlue"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			style="@style/Widget.AppCompat.Button.Colored" />
@@ -68,8 +68,7 @@
 					android:clickable="true"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:layout_gravity="center|top"
-					android:textColor="@color/colorPrimaryDark"
+					android:textColor="@color/lightBlue"
 					style="@style/Widget.AppCompat.Button.Borderless" />
 			</RelativeLayout>
 			<RelativeLayout
@@ -85,7 +84,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					style="@style/Widget.AppCompat.Button.Borderless"
-					android:textColor="@color/colorPrimaryDark" />
+					android:textColor="@color/lightBlue" />
 			</RelativeLayout>
 		</GridLayout>
 		<LinearLayout
@@ -102,7 +101,7 @@
 				android:layout_margin="5dp" />
 			<TextView
 				android:padding="5dp"
-				android:text="For Emergency"
+				android:text="Emergency Angel"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content" />
 			<View
@@ -111,13 +110,14 @@
 				android:background="#C4C8C9"
 				android:layout_margin="5dp" />
 		</LinearLayout>
-		<ImageView
+		<ImageButton
+			android:layout_centerHorizontal="true"
+			android:layout_width="200dp"
+			android:layout_height="125dp"
 			android:layout_below="@+id/login_layout_or"
 			android:scaleType="centerInside"
 			android:id="@+id/emergency"
-			android:layout_centerHorizontal="true"
-			android:background="@drawable/emergency_btn"
-			android:layout_width="200dp"
-			android:layout_height="125dp" />
+			android:background="@drawable/emergency_btn">
+		</ImageButton>
     </RelativeLayout>
 </RelativeLayout>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+	xmlns:tools="http://schemas.android.com/tools"
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:id="@+id/activity_dashboard"
 	android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
 	<TextView
 		android:layout_below="@+id/icon"
 		android:id="@+id/dashboard_welcome"
@@ -13,23 +15,22 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		style="@style/Widget.AppCompat.Button.Borderless"
-		android:textColor="@color/colorPrimaryDark" />
-	<Button
-		android:id="@+id/startChat"
-		android:text="Start Chat"
-		  android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-	<Button
-		android:id="@+id/startCall"
-		android:text="Start Call"
-		  android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-	<Button
-		android:id="@+id/viewResources"
-		android:text="View Resources"
-		  android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+		android:textColor="@color/lightBlue" />
+	
+		<Button
+			android:id="@+id/startChat"
+			android:text="Start Chat"
+			android:layout_weight="1"
+			android:height="100dp"
+			android:layout_gravity="fill"/>
+		<Button
+			android:id="@+id/startCall"
+			android:text="Start Call"
+			android:layout_gravity="fill"
+			android:layout_weight="1" />
+		<Button
+			android:id="@+id/viewResources"
+			android:layout_gravity="fill"
+			android:text="View Resources"
+			android:layout_weight="1" />
 </LinearLayout>

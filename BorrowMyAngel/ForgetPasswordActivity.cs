@@ -10,10 +10,10 @@ using Firebase.Auth;
 using static Android.Views.View;
 
 namespace BorrowMyAngel
-{
-    [Activity(Label = "ForgetPasswordActivity")]
-    public class ForgetPasswordActivity : AppCompatActivity, IOnClickListener, IOnCompleteListener
     {
+    [Activity(Label = "Forgot Password")]
+    public class ForgetPasswordActivity : AppCompatActivity, IOnClickListener, IOnCompleteListener { 
+    //public class ForgetPasswordActivity : Activity, IOnClickListener, IOnCompleteListener {
         EditText input_email;
         Button btnResetPas;
         TextView btnBack;
@@ -45,7 +45,7 @@ namespace BorrowMyAngel
             input_email = FindViewById<EditText>(Resource.Id.forget_email);
             btnResetPas = FindViewById<Button>(Resource.Id.forget_btn_reset);
             btnBack = FindViewById<TextView>(Resource.Id.forget_btn_back);
-            activity_forget = FindViewById<RelativeLayout>(Resource.Id.activity_forget);
+            //activity_forget = FindViewById<RelativeLayout>(Resource.Id.activity_forget);
             btnResetPas.SetOnClickListener(this);
             btnBack.SetOnClickListener(this);
         }

@@ -73,6 +73,10 @@ namespace BorrowMyAngel
                 WriteRecord(user);
 
                 Toast.MakeText(this, "Registration Successful", ToastLength.Long).Show();
+                Intent signup = new Intent(this, typeof(UserProfileActivity));
+                signup.PutExtra("email",input_email.Text);
+                StartActivity(signup);
+                Finish();
             }
             else
             {

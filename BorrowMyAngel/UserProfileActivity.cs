@@ -13,10 +13,14 @@ using Newtonsoft.Json.Linq;
 
 namespace BorrowMyAngel
 {
-    [Activity(Label = "UserProfileActivity")]
+    [Activity(Theme = "@style/AppTheme")]
     public class UserProfileActivity : Activity
     {
-        private string gender;
+        RadioButton maleButton;
+        RadioButton femButton;
+        RadioButton nbButton;
+
+        private string gender = "";
         string id;
         string email;
         public string Gender
@@ -50,6 +54,7 @@ namespace BorrowMyAngel
             SetContentView(Resource.Layout.UserProfile);
 
             //get the ID
+            //id = Intent.GetStringExtra("id") ?? string.Empty;
             id = Intent.GetStringExtra("id") ?? string.Empty;
 
             //display the currently active user email
@@ -57,13 +62,13 @@ namespace BorrowMyAngel
             TextView emailView = FindViewById<TextView>(Resource.Id.emailView);
             emailView.Text = email;
 
-            RadioButton maleButton = FindViewById<RadioButton>(Resource.Id.maleButton);
+            maleButton = FindViewById<RadioButton>(Resource.Id.maleButton);
             maleButton.Click += RadioButtonClick;
 
-            RadioButton femButton = FindViewById<RadioButton>(Resource.Id.femaleButton);
+            femButton = FindViewById<RadioButton>(Resource.Id.femaleButton);
             femButton.Click += RadioButtonClick;
 
-            RadioButton nbButton = FindViewById<RadioButton>(Resource.Id.nbButton);
+            nbButton = FindViewById<RadioButton>(Resource.Id.nbButton);
             nbButton.Click += RadioButtonClick;
 
             //get the submit button
@@ -73,23 +78,28 @@ namespace BorrowMyAngel
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            string firstname;
+            string nick;
+            int userAge = 0;
+
             EditText firstName = FindViewById<EditText>(Resource.Id.firstNameBox);
-            string firstname = firstName.Text;
+            firstname = firstName.Text;
 
             EditText nickName = FindViewById<EditText>(Resource.Id.nicknameBox);
-            string nick = nickName.Text;
+            nick = nickName.Text;
 
             EditText age = FindViewById<EditText>(Resource.Id.ageBox);
-            int userAge = Convert.ToInt32(age.Text);
+            if(age.Text.Trim() != "") {
+                userAge = Convert.ToInt32(age.Text);
+            }
 
             WriteRecord(firstname, nick, userAge, Gender);
-
-
         }
 
         private void RadioButtonClick(object sender, EventArgs e)
         {
             RadioButton rb = (RadioButton)sender;
+            string rbText = rb.Text;
             Gender = rb.Text;
         }
 
@@ -112,7 +122,8 @@ namespace BorrowMyAngel
                 myUser["name"] = fname;
                 myUser["nickname"] = nick;
                 myUser["age"] = age;
-                myUser["gender"] = Gender;
+                //myUser["gender"] = Gender;
+                myUser["gender"] = gender;
 
                 //payload has to be encapsulated in double quotes, thus the strange escape sequences here
                 var invokeRequest = new Amazon.Lambda.Model.InvokeRequest { FunctionName = "WriteUserProfile", InvocationType = "RequestResponse", PayloadStream = AWSSDKUtils.GenerateMemoryStreamFromString(myUser.ToString()), };
