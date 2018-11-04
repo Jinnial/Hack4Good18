@@ -27,7 +27,7 @@ namespace BorrowMyAngel
             SetContentView(Resource.Layout.AngelDashboard);
 
             //get the ID of the currently logged in Angel
-
+            //id = Intent.GetStringExtra("id") ?? string.Empty;
 
             //update status
             CheckStatus();

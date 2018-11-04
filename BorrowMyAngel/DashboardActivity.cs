@@ -15,11 +15,14 @@ namespace BorrowMyAngel
     [Activity(Label = "Dashboard", Theme = "@style/AppTheme")]
     public class DashBoardActivity : AppCompatActivity
     {
-        
+        string id;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Dashboard);
+
+            // get the ID
+            id = Intent.GetStringExtra("id") ?? string.Empty;
 
             Button startCall = FindViewById<Button>(Resource.Id.startCall);
             startCall.Click += StartCall_Click;

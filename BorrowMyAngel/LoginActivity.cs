@@ -8,8 +8,7 @@ using static Android.Views.View;
 using Android.Views;
 using Android.Gms.Tasks;
 using Android.Support.Design.Widget;
-
-
+using Android.Content;
 
 namespace BorrowMyAngel
 {
@@ -77,8 +76,22 @@ namespace BorrowMyAngel
         {
             if (task.IsSuccessful)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(DashBoardActivity)));
+                //get their uID
+                FirebaseUser user = auth.CurrentUser;
+                string id = user.Uid;
+
+                //find out which app role they have so we send them to the right dashboard
+                //if they are a user 
+                var intent = new Intent(this, typeof(DashBoardActivity));
+                intent.PutExtra("id", id);
+                StartActivity(intent);
                 Finish();
+
+                //if they are an angel
+                //var intent = new Intent(this, typeof(AngelDashboardActivity));
+                //intent.PutExtra("id", id);
+                //StartActivity(intent);
+                //Finish();
             }
             else
             {
