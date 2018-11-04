@@ -12,11 +12,12 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Runtime.Serialization;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
-namespace SendNotification
+namespace AngelService
 {
     public class Function
     {
@@ -34,12 +35,6 @@ namespace SendNotification
             get { return connection; }
         }
 
-        /// <summary>
-        /// A simple function that takes a string and does a ToUpper
-        /// </summary>
-        /// <param name="input"></param>
-        /// <param name="context"></param>
-        /// <returns></returns>
         public int FunctionHandler(JObject input, ILambdaContext context)
         {
             context.Logger.LogLine($"Beginning to insert record...");
@@ -81,12 +76,19 @@ namespace SendNotification
             return status;
         }
 
-        public void FindAngelToken()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>Returns the Notification Token of Avalible Angel</returns>
+        public string FindAnAngel()
         {
-
+            return "";
         }
 
         public void UpdateNotifToken(string uID, string token)
+        {
+
+        }
     }
 
     public class NotificationSystem
@@ -122,7 +124,7 @@ namespace SendNotification
             }
             return result;
         }
-    
+
         public static void AlertAngel(string clientToken, string chatID)
         {
             var result = "-1";
@@ -131,8 +133,7 @@ namespace SendNotification
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Headers.Add(HttpRequestHeader.Authorization, authToken);
             httpWebRequest.Method = "POST";
-            request.title = header;
-            request.body = content;
+
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
                 NotificationAngel notif = new NotificationAngel
@@ -171,7 +172,7 @@ namespace SendNotification
     public class NotificationType
     {
         [DataMember(Name = "type")]
-        public string type { get; set; }} 
+        public string type { get; set; }
     }
 
     [DataContract]
@@ -191,16 +192,17 @@ namespace SendNotification
         public string client { get; set; }
 
         [DataMember(Name = "chat")]
-        public string chat { get; set; }} 
+        public string chat { get; set; }
     }
 
+    [DataContract]
     public class AngelRequest
     {
         [DataMember(Name = "clientToken")]
         public string clientToken { get; set; }
 
         [DataMember(Name = "data")]
-        public string chatID { get; set; } 
+        public string chatID { get; set; }
     }
     #endregion
 }
