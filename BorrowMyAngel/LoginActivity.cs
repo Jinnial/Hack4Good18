@@ -16,6 +16,8 @@ namespace BorrowMyAngel
     public class LoginActivity : Activity, IOnCompleteListener
     {
         Button btnLogin;
+        TextView btnAngelSignUp;
+        TextView btnPrivacy;
         ImageButton btnAngel;
         EditText input_email, input_password;
         TextView btnSignUp, btnForgetPassword;
@@ -36,11 +38,15 @@ namespace BorrowMyAngel
             btnSignUp = FindViewById<TextView>(Resource.Id.login_btn_sign_up);
             btnForgetPassword = FindViewById<TextView>(Resource.Id.login_btn_forget_password);
             activity_main = FindViewById<RelativeLayout>(Resource.Id.activity_main);
+            btnAngelSignUp = FindViewById<TextView>(Resource.Id.become_angel);
+            btnPrivacy = FindViewById<TextView>(Resource.Id.privacy_policy);
             btnAngel = FindViewById<ImageButton>(Resource.Id.emergency);
             btnSignUp.Click += SignUp_Click;
             btnLogin.Click += Login_Click;
             btnForgetPassword.Click += Forgot_Click;
             btnAngel.Click += Angel_Click;
+            btnPrivacy.Click += Privacy_Click;
+            btnAngelSignUp.Click += AngelSignUp_Click;
         }
         private void InitFirebaseAuth()
         {
@@ -57,6 +63,22 @@ namespace BorrowMyAngel
         {
             StartActivity(new Android.Content.Intent(this, typeof(SignUpActivity)));
           
+        }
+
+        private void AngelSignUp_Click(object sender, EventArgs e)
+        {
+            var uri = Android.Net.Uri.Parse("http://otcwebdev.net/borrowmyangel/angel-signup.php");
+            var intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
+
+        }
+
+        private void Privacy_Click(object sender, EventArgs e)
+        {
+            var uri = Android.Net.Uri.Parse("http://otcwebdev.net/borrowmyangel/index.php");
+            var intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
+
         }
 
         private void Login_Click(object sender, EventArgs e)
