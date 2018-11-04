@@ -13,7 +13,7 @@ using Newtonsoft.Json.Linq;
 
 namespace BorrowMyAngel
 {
-    [Activity(Label = "AngelDashboardActivity", MainLauncher = true)]
+    [Activity(Label = "AngelDashboardActivity")]
     public class AngelDashboardActivity : Activity
     {
         //hard coded ID for testing

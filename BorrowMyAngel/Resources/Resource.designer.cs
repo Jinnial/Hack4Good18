@@ -2541,11 +2541,11 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0064
 			public const int activity_chooser_view_content = 2131492964;
 			
-			// aapt resource value: 0x7f0c0098
-			public const int activity_dashboard = 2131493016;
+			// aapt resource value: 0x7f0c00b0
+			public const int activity_dashboard = 2131493040;
 			
-			// aapt resource value: 0x7f0c00ab
-			public const int activity_forget = 2131493035;
+			// aapt resource value: 0x7f0c00aa
+			public const int activity_forget = 2131493034;
 			
 			// aapt resource value: 0x7f0c00b3
 			public const int activity_main = 2131493043;
@@ -2631,14 +2631,14 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0096
 			public const int connectButton = 2131493014;
 			
-			// aapt resource value: 0x7f0c009f
-			public const int container = 2131493023;
+			// aapt resource value: 0x7f0c009e
+			public const int container = 2131493022;
 			
 			// aapt resource value: 0x7f0c006d
 			public const int contentPanel = 2131492973;
 			
-			// aapt resource value: 0x7f0c00a0
-			public const int coordinator = 2131493024;
+			// aapt resource value: 0x7f0c009f
+			public const int coordinator = 2131493023;
 			
 			// aapt resource value: 0x7f0c0074
 			public const int custom = 2131492980;
@@ -2649,8 +2649,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0024
 			public const int dark = 2131492900;
 			
-			// aapt resource value: 0x7f0c0099
-			public const int dashboard_welcome = 2131493017;
+			// aapt resource value: 0x7f0c0098
+			public const int dashboard_welcome = 2131493016;
 			
 			// aapt resource value: 0x7f0c0081
 			public const int decor_content_parent = 2131492993;
@@ -2658,20 +2658,20 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0067
 			public const int default_activity_button = 2131492967;
 			
-			// aapt resource value: 0x7f0c00a2
-			public const int design_bottom_sheet = 2131493026;
-			
-			// aapt resource value: 0x7f0c00a9
-			public const int design_menu_item_action_area = 2131493033;
+			// aapt resource value: 0x7f0c00a1
+			public const int design_bottom_sheet = 2131493025;
 			
 			// aapt resource value: 0x7f0c00a8
-			public const int design_menu_item_action_area_stub = 2131493032;
+			public const int design_menu_item_action_area = 2131493032;
 			
 			// aapt resource value: 0x7f0c00a7
-			public const int design_menu_item_text = 2131493031;
+			public const int design_menu_item_action_area_stub = 2131493031;
 			
 			// aapt resource value: 0x7f0c00a6
-			public const int design_navigation_view = 2131493030;
+			public const int design_menu_item_text = 2131493030;
+			
+			// aapt resource value: 0x7f0c00a5
+			public const int design_navigation_view = 2131493029;
 			
 			// aapt resource value: 0x7f0c0029
 			public const int disableHome = 2131492905;
@@ -2733,20 +2733,20 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c005f
 			public const int forever = 2131492959;
 			
-			// aapt resource value: 0x7f0c00b0
-			public const int forget_btn_back = 2131493040;
-			
 			// aapt resource value: 0x7f0c00af
-			public const int forget_btn_reset = 2131493039;
+			public const int forget_btn_back = 2131493039;
 			
 			// aapt resource value: 0x7f0c00ae
-			public const int forget_email = 2131493038;
+			public const int forget_btn_reset = 2131493038;
 			
 			// aapt resource value: 0x7f0c00ad
-			public const int forget_input_email = 2131493037;
+			public const int forget_email = 2131493037;
 			
 			// aapt resource value: 0x7f0c00ac
-			public const int forget_message = 2131493036;
+			public const int forget_input_email = 2131493036;
+			
+			// aapt resource value: 0x7f0c00ab
+			public const int forget_message = 2131493035;
 			
 			// aapt resource value: 0x7f0c00b9
 			public const int forgot_signup = 2131493049;
@@ -2787,8 +2787,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0000
 			public const int item_touch_helper_previous_elevation = 2131492864;
 			
-			// aapt resource value: 0x7f0c009e
-			public const int largeLabel = 2131493022;
+			// aapt resource value: 0x7f0c009d
+			public const int largeLabel = 2131493021;
 			
 			// aapt resource value: 0x7f0c0050
 			public const int left = 2131492944;
@@ -2859,8 +2859,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0030
 			public const int multiply = 2131492912;
 			
-			// aapt resource value: 0x7f0c00a5
-			public const int navigation_header_container = 2131493029;
+			// aapt resource value: 0x7f0c00a4
+			public const int navigation_header_container = 2131493028;
 			
 			// aapt resource value: 0x7f0c00e8
 			public const int nbButton = 2131493096;
@@ -3015,14 +3015,14 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c00d5
 			public const int signup_password = 2131493077;
 			
-			// aapt resource value: 0x7f0c009d
-			public const int smallLabel = 2131493021;
-			
-			// aapt resource value: 0x7f0c00a4
-			public const int snackbar_action = 2131493028;
+			// aapt resource value: 0x7f0c009c
+			public const int smallLabel = 2131493020;
 			
 			// aapt resource value: 0x7f0c00a3
-			public const int snackbar_text = 2131493027;
+			public const int snackbar_action = 2131493027;
+			
+			// aapt resource value: 0x7f0c00a2
+			public const int snackbar_text = 2131493026;
 			
 			// aapt resource value: 0x7f0c004b
 			public const int snap = 2131492939;
@@ -3048,11 +3048,11 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0052
 			public const int start = 2131492946;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int startCall = 2131493019;
-			
 			// aapt resource value: 0x7f0c009a
-			public const int startChat = 2131493018;
+			public const int startCall = 2131493018;
+			
+			// aapt resource value: 0x7f0c0099
+			public const int startChat = 2131493017;
 			
 			// aapt resource value: 0x7f0c0092
 			public const int statusView = 2131493010;
@@ -3105,8 +3105,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c00db
 			public const int textView7 = 2131493083;
 			
-			// aapt resource value: 0x7f0c00aa
-			public const int text_input_password_toggle = 2131493034;
+			// aapt resource value: 0x7f0c00a9
+			public const int text_input_password_toggle = 2131493033;
 			
 			// aapt resource value: 0x7f0c0014
 			public const int textinput_counter = 2131492884;
@@ -3132,8 +3132,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c0075
 			public const int topPanel = 2131492981;
 			
-			// aapt resource value: 0x7f0c00a1
-			public const int touch_outside = 2131493025;
+			// aapt resource value: 0x7f0c00a0
+			public const int touch_outside = 2131493024;
 			
 			// aapt resource value: 0x7f0c000f
 			public const int transition_current_scene = 2131492879;
@@ -3162,8 +3162,8 @@ namespace BorrowMyAngel
 			// aapt resource value: 0x7f0c002e
 			public const int useLogo = 2131492910;
 			
-			// aapt resource value: 0x7f0c009c
-			public const int viewResources = 2131493020;
+			// aapt resource value: 0x7f0c009b
+			public const int viewResources = 2131493019;
 			
 			// aapt resource value: 0x7f0c0016
 			public const int view_offset_helper = 2131492886;
