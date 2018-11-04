@@ -2,9 +2,9 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/activity_dashboard"
-	android:padding="16dp"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 	<TextView
 		android:layout_below="@+id/icon"
 		android:id="@+id/dashboard_welcome"
@@ -17,13 +17,19 @@
 	<Button
 		android:id="@+id/startChat"
 		android:text="Start Chat"
-		android:background="#263238"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content" />
+		  android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 	<Button
 		android:id="@+id/startCall"
 		android:text="Start Call"
-		android:background="#263238"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content" />
+		  android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+	<Button
+		android:id="@+id/viewResources"
+		android:text="View Resources"
+		  android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 </LinearLayout>

@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/activity_dashboard"
+	android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+	<TextView
+		android:layout_below="@+id/icon"
+		android:id="@+id/dashboard_welcome"
+		android:text="Welcome, user"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		style="@style/Widget.AppCompat.Button.Borderless"
+		android:textColor="@color/colorPrimaryDark" />
+	<Button
+		android:id="@+id/startChat"
+		android:text="Start Chat"
+		  android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+	<Button
+		android:id="@+id/startCall"
+		android:text="Start Call"
+		  android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 </LinearLayout>
