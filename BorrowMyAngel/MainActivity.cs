@@ -19,15 +19,23 @@ namespace BorrowMyAngel
 
             // Get our button from the layout resource,
             // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.myButton);
-
+            Button button = FindViewById<Button>(Resource.Id.loginButton);
             button.Click += Login_Click;
+
+            Button guestButton = FindViewById<Button>(Resource.Id.guestButton);
+            guestButton.Click += Guest_Click;
         }
 
         private void Login_Click(object sender, EventArgs e)
         {
-            var secondIntent = new Intent(this, typeof(LoginActivity));
-            StartActivity(secondIntent);
+            var intent = new Intent(this, typeof(LoginActivity));
+            StartActivity(intent);
+        }
+
+        private void Guest_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(GuestDashboardActivity));
+            StartActivity(intent);
         }
     }
 }
