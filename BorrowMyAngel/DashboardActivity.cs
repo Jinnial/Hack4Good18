@@ -1,6 +1,5 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Content.PM;
 using Android.Gms.Tasks;
 using Android.OS;
 using Android.Support.Design.Widget;
@@ -9,7 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
 using System;
-using static Android.Views.View;
+
 
 namespace BorrowMyAngel
 {
@@ -29,8 +28,8 @@ namespace BorrowMyAngel
 
         private void StartCall_Click(object sender, EventArgs e)
         {
-            // var intent = new Intent(this, typeof(AudioCallActivity));
-            //StartActivity(intent);
+            var intent = new Intent(this, typeof(AudioCallActivity));
+            StartActivity(intent);
 
          
         }
