@@ -22,18 +22,25 @@ namespace BorrowMyAngel
             SetContentView(Resource.Layout.Dashboard);
 
             Button startCall = FindViewById<Button>(Resource.Id.startCall);
+            Button openChat = FindViewById<Button>(Resource.Id.startChat);
             startCall.Click += StartCall_Click;
+            openChat.Click += Start_Click;
         }
-       
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            var secondIntent = new Intent(this, typeof(LoginActivity));
+            StartActivity(secondIntent);
+        }
 
         private void StartCall_Click(object sender, EventArgs e)
         {
             // var intent = new Intent(this, typeof(AudioCallActivity));
             //StartActivity(intent);
 
-            var uri = Android.Net.Uri.Parse("https://static.vidyo.io/4.1.24.15/connector/VidyoConnector.html?host=prod.vidyo.io&token=" + Auth.vidToken + "&resourceId=SomeRoom");
-            var intent = new Intent(Intent.ActionView, uri);
-            StartActivity(intent);
+            //var uri = Android.Net.Uri.Parse("https://static.vidyo.io/4.1.24.15/connector/VidyoConnector.html?host=prod.vidyo.io&token=" + Auth.vidToken + "&resourceId=SomeRoom");
+            //var intent = new Intent(Intent.ActionView, uri);
+            //StartActivity(intent);
         }
 
     }

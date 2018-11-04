@@ -80,13 +80,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="TwilioVoice.Android">
-      <HintPath>packages\Twilio.Voice.Android.XamarinBinding.2.0.9\lib\monoandroid41\TwilioVoice.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Java.Interop" />
-    <Reference Include="Twilio.Chat.Android">
-      <HintPath>packages\Twilio.Chat.Xamarin.0.3.0\lib\MonoAndroid44\Twilio.Chat.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Validation, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
       <HintPath>packages\Validation.2.0.6.15003\lib\portable-net40+sl50+win+wpa81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\Validation.dll</HintPath>
     </Reference>
@@ -113,12 +107,6 @@
     </Reference>
     <Reference Include="Xamarin.Firebase.Auth">
       <HintPath>packages\Xamarin.Firebase.Auth.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Firebase.Database.Connection">
-      <HintPath>packages\Xamarin.Firebase.Database.Connection.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Database.Connection.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Firebase.Database">
-      <HintPath>packages\Xamarin.Firebase.Database.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Database.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>packages\Xamarin.Android.Support.Annotations.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
@@ -168,6 +156,18 @@
     <Reference Include="Xamarin.Firebase.Messaging">
       <HintPath>packages\Xamarin.Firebase.Messaging.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Messaging.dll</HintPath>
     </Reference>
+    <Reference Include="Square.OkIO">
+      <HintPath>packages\Square.OkIO.1.6.0.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
+    </Reference>
+    <Reference Include="Square.OkHttp">
+      <HintPath>packages\Square.OkHttp.2.7.5.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Firebase.Database.Connection">
+      <HintPath>packages\Xamarin.Firebase.Database.Connection.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Database.Connection.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Firebase.Database">
+      <HintPath>packages\Xamarin.Firebase.Database.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Database.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auth.cs" />
@@ -176,13 +176,19 @@
     <Compile Include="LegalDisclaimerActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="LoginActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUpActivity.cs" />
+    <Compile Include="UserProfileActivity.cs" />
+    <Compile Include="ChatRoomActivity.cs" />
+    <Compile Include="Helpers.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\Application.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\AudioFrame.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\BandwidthSummaryStats.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\Calendar.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\CalendarCapabilityKey.cs" />
-    <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\CalendarConnectResult.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\CalendarConnProps.cs" />
+    <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\CalendarConnectResult.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\CalendarCreateCode.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\CalendarFeedback.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\CalendarManager.cs" />
@@ -220,10 +226,10 @@
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\LocalVideoSourceStats.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\LocalWindowShare.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\LogDataStats.cs" />
-    <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\Logger.cs" />
-    <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\LoggerCategory.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\LogRecord.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\LogStats.cs" />
+    <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\Logger.cs" />
+    <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\LoggerCategory.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\MediaConnectionTransportInfo.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\MediaFormat.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\Meeting.cs" />
@@ -259,23 +265,62 @@
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\VideoFrame.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\VirtualDeviceManager.cs" />
     <Compile Include="packages\VidyoClient-AndroidSDK\include\csharp\VirtualShareManager.cs" />
-    <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUpActivity.cs" />
-    <Compile Include="UserProfileActivity.cs" />
+    <Compile Include="Temp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="google-services.json" />
-    <AndroidNativeLibrary Include="packages\VidyoClient-AndroidSDK\lib\android\arm64-v8a\libVidyoClient.so" />
-    <AndroidNativeLibrary Include="packages\VidyoClient-AndroidSDK\lib\android\armeabi-v7a\libVidyoClient.so" />
-    <AndroidNativeLibrary Include="packages\VidyoClient-AndroidSDK\lib\android\x86\libVidyoClient.so" />
-    <AndroidNativeLibrary Include="packages\VidyoClient-AndroidSDK\lib\android\x86_64\libVidyoClient.so" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </None>
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="packages\VidyoClient-AndroidSDK\.DS_Store" />
+    <None Include="packages\VidyoClient-AndroidSDK\readme_vidyoclient_android.html" />
+    <None Include="packages\VidyoClient-AndroidSDK\lib\.DS_Store" />
+    <None Include="packages\VidyoClient-AndroidSDK\lib\android\vidyoclient.jar" />
+    <None Include="packages\VidyoClient-AndroidSDK\lib\android\arm64-v8a\libVidyoClient.so" />
+    <None Include="packages\VidyoClient-AndroidSDK\lib\android\armeabi-v7a\libVidyoClient.so" />
+    <None Include="packages\VidyoClient-AndroidSDK\lib\android\x86\libVidyoClient.so" />
+    <None Include="packages\VidyoClient-AndroidSDK\lib\android\x86_64\libVidyoClient.so" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\build.gradle" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\gradle.properties" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\gradlew" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\gradlew.bat" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\settings.gradle" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\build.gradle" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\proguard-rules.pro" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\AndroidManifest.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\java\com\vidyo\vidyoconnector\IVideoFrameListener.java" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\java\com\vidyo\vidyoconnector\Logger.java" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\java\com\vidyo\vidyoconnector\MainActivity.java" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\java\com\vidyo\vidyoconnector\VideoFrameLayout.java" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\callend.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\callstart.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\camera_off.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\camera_switch.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\cameraonwhite.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\gear.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\microphoneoff.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\microphoneonwhite.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\rounded_border_edittext.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\toggle_camera_privacy.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\toggle_connect.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\toggle_mic_privacy.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\vidyo_io_icon.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\drawable\vidyo_io_vertical_dark_at_2x.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\layout\activity_main.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\menu\menu_main.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\mipmap-hdpi\ic_launcher.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\mipmap-mdpi\ic_launcher.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\mipmap-xhdpi\ic_launcher.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\mipmap-xxhdpi\ic_launcher.png" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\values\dimens.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\values\strings.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\values\styles.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\app\src\main\res\values-w820dp\dimens.xml" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\gradle\wrapper\gradle-wrapper.jar" />
+    <None Include="packages\VidyoClient-AndroidSDK\samples\VidyoConnector\android\gradle\wrapper\gradle-wrapper.properties" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -285,6 +330,8 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\ChatRoom.axml" />
+    <AndroidResource Include="Resources\layout\ChatMessageTemplate.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Dashboard.axml">
@@ -328,8 +375,6 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-    <GoogleServicesJson Include="google-services.json" />
-    <AndroidJavaLibrary Include="packages\VidyoClient-AndroidSDK\lib\android\vidyoclient.jar" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="packages\Xamarin.Build.Download.0.4.9\build\Xamarin.Build.Download.targets" Condition="Exists('packages\Xamarin.Build.Download.0.4.9\build\Xamarin.Build.Download.targets')" />
   <Import Project="packages\Xamarin.GooglePlayServices.Basement.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('packages\Xamarin.GooglePlayServices.Basement.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Basement.targets')" />
@@ -340,8 +385,6 @@
   <Import Project="packages\Xamarin.Firebase.Analytics.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.targets" Condition="Exists('packages\Xamarin.Firebase.Analytics.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.targets')" />
   <Import Project="packages\Xamarin.GooglePlayServices.Base.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Base.targets" Condition="Exists('packages\Xamarin.GooglePlayServices.Base.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Base.targets')" />
   <Import Project="packages\Xamarin.Firebase.Auth.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Auth.targets" Condition="Exists('packages\Xamarin.Firebase.Auth.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Auth.targets')" />
-  <Import Project="packages\Xamarin.Firebase.Database.Connection.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Database.Connection.targets" Condition="Exists('packages\Xamarin.Firebase.Database.Connection.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Database.Connection.targets')" />
-  <Import Project="packages\Xamarin.Firebase.Database.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Database.targets" Condition="Exists('packages\Xamarin.Firebase.Database.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Database.targets')" />
   <Import Project="packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
   <Import Project="packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
   <Import Project="packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
@@ -358,4 +401,6 @@
   <Import Project="packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets')" />
   <Import Project="packages\Xamarin.Android.Support.Design.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Design.targets" Condition="Exists('packages\Xamarin.Android.Support.Design.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Design.targets')" />
   <Import Project="packages\Xamarin.Firebase.Messaging.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Messaging.targets" Condition="Exists('packages\Xamarin.Firebase.Messaging.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Messaging.targets')" />
+  <Import Project="packages\Xamarin.Firebase.Database.Connection.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Database.Connection.targets" Condition="Exists('packages\Xamarin.Firebase.Database.Connection.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Database.Connection.targets')" />
+  <Import Project="packages\Xamarin.Firebase.Database.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Database.targets" Condition="Exists('packages\Xamarin.Firebase.Database.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Database.targets')" />
 </Project>

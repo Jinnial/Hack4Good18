@@ -6,6 +6,7 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Firebase;
 using Firebase.Auth;
 using static Android.Views.View;
 
@@ -40,7 +41,13 @@ namespace BorrowMyAngel
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ForgetPassword);
             //Init Firebase  
-            auth = FirebaseAuth.GetInstance(LoginActivity.app);
+            var options = new FirebaseOptions.Builder()
+               .SetApplicationId(Auth.ApplicationID)
+               .SetApiKey(Auth.APIKey)
+               .Build();
+            if (Auth.app == null)
+                Auth.app = FirebaseApp.InitializeApp(this, options);
+            auth = FirebaseAuth.GetInstance(Auth.app);
             //Views  
             input_email = FindViewById<EditText>(Resource.Id.forget_email);
             btnResetPas = FindViewById<Button>(Resource.Id.forget_btn_reset);

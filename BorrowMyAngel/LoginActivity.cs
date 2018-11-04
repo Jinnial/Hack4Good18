@@ -20,7 +20,6 @@ namespace BorrowMyAngel
         EditText input_email, input_password;
         TextView btnSignUp, btnForgetPassword;
         RelativeLayout activity_main;
-        public static FirebaseApp app;
         FirebaseAuth auth;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,9 +45,9 @@ namespace BorrowMyAngel
                .SetApplicationId(Auth.ApplicationID)
                .SetApiKey(Auth.APIKey)
                .Build();
-            if (app == null)
-                app = FirebaseApp.InitializeApp(this, options);
-            auth = FirebaseAuth.GetInstance(app);
+            if (Auth.app == null)
+                Auth.app = FirebaseApp.InitializeApp(this, options);
+            auth = FirebaseAuth.GetInstance(Auth.app);
         }
 
         private void SignUp_Click(object sender, EventArgs e)

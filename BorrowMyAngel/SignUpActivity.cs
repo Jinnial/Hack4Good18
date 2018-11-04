@@ -6,6 +6,7 @@ using Android.Support.Design.Widget;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using Firebase;
 using static Android.Views.View;
 using System;
 using Newtonsoft.Json.Linq;
@@ -50,7 +51,13 @@ namespace BorrowMyAngel
             // Create your application here  
             SetContentView(Resource.Layout.SignUp);
             //Init Firebase  
-            auth = FirebaseAuth.GetInstance(LoginActivity.app);
+            var options = new FirebaseOptions.Builder()
+               .SetApplicationId(Auth.ApplicationID)
+               .SetApiKey(Auth.APIKey)
+               .Build();
+            if (Auth.app == null)
+                Auth.app = FirebaseApp.InitializeApp(this, options);
+            auth = FirebaseAuth.GetInstance(Auth.app);
             //Views  
             btnSignup = FindViewById<Button>(Resource.Id.signup_btn_register);
             btnLogin = FindViewById<TextView>(Resource.Id.signup_btn_login);
