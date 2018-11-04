@@ -119,5 +119,43 @@
 			android:id="@+id/emergency"
 			android:background="@drawable/emergency_btn">
 		</ImageButton>
+		<GridLayout
+			android:id="@+id/privacy_policy_angel"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:columnCount="2"
+			android:layout_gravity="center"
+			android:textAlignment="center"
+			android:layout_below="@+id/emergency">
+			<RelativeLayout
+				android:layout_gravity="center|top">
+				<TextView
+					android:layout_gravity="center|top"
+					android:id="@+id/privacy_policy"
+					android:text="Privacy Policy"
+					android:textStyle="bold"
+					android:clickable="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/lightBlue"
+					style="@style/Widget.AppCompat.Button.Borderless" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:layout_gravity="center|top">
+				<TextView
+					android:layout_gravity="center|top"
+					android:textAlignment="center"
+					android:layout_centerHorizontal="true"
+					android:id="@+id/become_angel"
+					android:text="Become an Angel"
+					android:textStyle="bold"
+					android:clickable="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/Widget.AppCompat.Button.Borderless"
+					android:textColor="@color/lightBlue" />
+			</RelativeLayout>
+		</GridLayout>
     </RelativeLayout>
 </RelativeLayout>

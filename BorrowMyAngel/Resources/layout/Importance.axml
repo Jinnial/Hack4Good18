@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<GridLayout
+		android:textAlignment="center"
+		android:alignmentMode="alignBounds"
+		android:columnCount="6"
+		android:layout_centerHorizontal="true"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<TextView
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:layout_weight="1"
+			android:text="I should talk"
+			android:textAppearance="?android:attr/textAppearanceSmall"/>
+		<TextView
+			android:gravity="center"
+			android:layout_weight="1"
+			android:text="I need to talk"
+			android:textAppearance="?android:attr/textAppearanceSmall"/>
+		<TextView
+			android:gravity="center"
+			android:layout_weight="1"
+			android:text="Immediate Help"
+			android:textAppearance="?android:attr/textAppearanceSmall"/>
+	</GridLayout>
+</LinearLayout>

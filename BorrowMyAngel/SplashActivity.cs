@@ -39,7 +39,7 @@ namespace BorrowMyAngel {
         }
         async void DoStartup() {
             Log.Debug(TAG, "Waiting done, launching main activity");
-            await Task.Delay (2000);
+            await Task.Delay (3000);
             Log.Debug(TAG, "Startup work is finished - starting SignUpActivity.");
             StartActivity(new Intent(this, typeof(LoginActivity)));
         }
